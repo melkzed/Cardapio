@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mordida Perfeita | Cardápio Delivery</title>
+    <link rel="icon" href="data:,">
+    <meta
+      name="description"
+      content="Cardápio delivery da Mordida Perfeita com hambúrgueres, combos, promoções e pedido pelo WhatsApp."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Mordida Perfeita">
+        <span>Mordida</span> Perfeita
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#localizacao">Localização</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button cart-button" type="button" aria-label="Abrir carrinho">
+          <span aria-hidden="true">🛒</span>
+          <strong class="cart-count" data-cart-count>0</strong>
+        </button>
+        <a class="header-cta" href="#cardapio">
+          <span aria-hidden="true">🍔</span>
+          Pedir Agora
+        </a>
+        <button class="icon-button menu-button" type="button" aria-label="Abrir menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Menu mobile">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#promocoes">Promoções</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">Inauguração 15 de maio</p>
+          <h1>A <span>Mordida</span> Perfeita</h1>
+          <p>
+            Hambúrgueres artesanais com ingredientes premium. O melhor delivery
+            de Recife - PE chegou no Shopping Recife!
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#cardapio">
+              <span aria-hidden="true">🍔</span>
+              Pedir Agora
+            </a>
+            <a class="secondary-action" href="#cardapio">Ver Cardápio</a>
+          </div>
+          <div class="hero-meta" aria-label="Informações rápidas">
+            <span>🕘 18h - 23h</span>
+            <span>⭐ Ingredientes Premium</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/hero-burger-ai.jpg" alt="">
+        </div>
+      </section>
+
+      <section class="menu-section" id="cardapio">
+        <div class="section-heading">
+          <p>Nosso cardápio</p>
+          <h2>Escolha sua <span>mordida</span></h2>
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="Categorias do cardápio">
+          <button class="category-tab active" type="button" data-category="all">☰ Todos</button>
+          <button class="category-tab" type="button" data-category="burger">🍔 Hambúrgueres</button>
+          <button class="category-tab" type="button" data-category="combo">🥤 Combos</button>
+          <button class="category-tab" type="button" data-category="portion">🍟 Porções</button>
+          <button class="category-tab" type="button" data-category="drink">🥛 Bebidas</button>
+          <button class="category-tab" type="button" data-category="promo">％ Promoções</button>
+        </div>
+
+        <div class="menu-toolbar" aria-label="Busca e informações do cardápio">
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input data-search-input type="search" placeholder="Buscar por nome, ingrediente ou tag">
+          </label>
+          <div class="menu-toolbar-info">
+            <span data-product-count>0 itens</span>
+            <button class="text-button" type="button" data-clear-filters>Limpar filtros</button>
+          </div>
+        </div>
+
+        <div class="product-grid" data-product-grid></div>
+      </section>
+
+      <section class="promo-band" id="promocoes">
+        <div>
+          <p class="eyebrow">Inauguração</p>
+          <h2>Promoção de abertura</h2>
+          <p>
+            Monte seu pedido com adicionais especiais e finalize direto no WhatsApp.
+          </p>
+        </div>
+        <a class="primary-action" href="#cardapio">
+          <span aria-hidden="true">🔥</span>
+          Ver Ofertas
+        </a>
+      </section>
+
+      <section class="addons-section">
+        <div class="section-heading compact">
+          <p>Extras</p>
+          <h2>Deixe do seu jeito</h2>
+        </div>
+        <div class="addons-grid" data-addons-grid></div>
+      </section>
+
+      <section class="features-section" id="diferenciais">
+        <div class="section-heading">
+          <p>Por que nos escolher</p>
+          <h2>Nossos <span>diferenciais</span></h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span aria-hidden="true">🥩</span>
+            <h3>Ingredientes premium</h3>
+            <p>Carnes selecionadas, pão brioche e molhos preparados na casa.</p>
+          </article>
+          <article class="feature-card">
+            <span aria-hidden="true">⚡</span>
+            <h3>Entrega rápida</h3>
+            <p>Pedidos organizados para chegar quentinhos em Recife.</p>
+          </article>
+          <article class="feature-card">
+            <span aria-hidden="true">🍔</span>
+            <h3>Hambúrguer artesanal</h3>
+            <p>Combinações caprichadas, porções generosas e sabor de verdade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="location-section" id="localizacao">
+        <div class="map-panel" aria-label="Mapa do Shopping Recife">
+          <div class="map-pin">📍</div>
+        </div>
+        <div class="location-info">
+          <div class="info-row">
+            <span aria-hidden="true">📍</span>
+            <div>
+              <h3>Endereço</h3>
+              <p>Shopping Recife</p>
+              <p>Recife - Pernambuco</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span aria-hidden="true">🕘</span>
+            <div>
+              <h3>Horário de Funcionamento</h3>
+              <p>Terça a Domingo</p>
+              <p>18:00 às 23:00</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span aria-hidden="true">☎</span>
+            <div>
+              <h3>Contato</h3>
+              <p>WhatsApp: (81) 99461-6516</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand" href="#inicio">
+          <span>Mordida</span> Perfeita
+        </a>
+        <p>Hambúrgueres artesanais no Shopping Recife, em Recife - PE.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <p>Terça a Domingo</p>
+        <p>18:00 - 23:00</p>
+        <strong>Segunda: Fechado</strong>
+      </div>
+      <div>
+        <h3>Redes Sociais</h3>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Mordida Perfeita Delivery. Todos os direitos reservados.</p>
+    </footer>
+
+    <a class="floating-whatsapp" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+      <span aria-hidden="true">💬</span>
+      <strong>Pedir no WhatsApp</strong>
+    </a>
+
+    <aside class="cart-drawer" aria-label="Seu pedido" aria-hidden="true">
+      <header>
+        <h2><span aria-hidden="true">🛒</span> Seu Pedido <strong data-cart-count>0</strong></h2>
+        <button class="text-button clear-cart" type="button" data-clear-cart>Limpar</button>
+        <button class="icon-button close-cart" type="button" aria-label="Fechar carrinho">×</button>
+      </header>
+      <div class="cart-body" data-cart-body></div>
+      <footer class="cart-summary">
+        <form class="checkout-form" data-checkout-form>
+          <div class="delivery-toggle" role="radiogroup" aria-label="Forma de recebimento">
+            <label>
+              <input type="radio" name="fulfillment" value="delivery" data-fulfillment checked>
+              Entrega
+            </label>
+            <label>
+              <input type="radio" name="fulfillment" value="pickup" data-fulfillment>
+              Retirada
+            </label>
+          </div>
+
+          <label>
+            Nome
+            <input data-customer-name autocomplete="name" placeholder="Seu nome">
+          </label>
+
+          <label>
+            WhatsApp
+            <input data-customer-phone inputmode="tel" autocomplete="tel" placeholder="(81) 99999-9999">
+          </label>
+
+          <label class="delivery-field">
+            Endereço
+            <input data-customer-address autocomplete="street-address" placeholder="Rua, número e bairro">
+          </label>
+
+          <label class="delivery-field">
+            Referência
+            <input data-customer-reference placeholder="Casa, portão, ponto de referência">
+          </label>
+
+          <div class="checkout-row">
+            <label>
+              Pagamento
+              <select data-payment-method>
+                <option value="Pix">Pix</option>
+                <option value="Cartão">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
+              </select>
+            </label>
+            <label data-change-field hidden>
+              Troco para
+              <input data-change-for inputmode="decimal" placeholder="R$ 100,00">
+            </label>
+          </div>
+        </form>
+
+        <p class="cart-message" data-cart-message aria-live="polite"></p>
+
+        <div>
+          <span>Subtotal</span>
+          <strong data-cart-subtotal>R$ 0,00</strong>
+        </div>
+        <div>
+          <span>Taxa de entrega</span>
+          <strong data-delivery-fee>R$ 0,00</strong>
+        </div>
+        <div class="total">
+          <span>Total</span>
+          <strong data-cart-total>R$ 0,00</strong>
+        </div>
+        <button class="checkout-button" type="button">
+          <span aria-hidden="true">💬</span>
+          Finalizar no WhatsApp
+          <span aria-hidden="true">›</span>
+        </button>
+      </footer>
+    </aside>
+
+    <div class="modal-backdrop" aria-hidden="true">
+      <article class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="icon-button close-modal" type="button" aria-label="Fechar produto">×</button>
+        <div class="modal-scroll">
+          <div class="modal-image-wrap">
+            <img data-modal-image src="" alt="">
+            <span class="rating-pill">⭐ 4.7</span>
+          </div>
+          <div class="modal-content">
+            <h2 id="modal-title" data-modal-title></h2>
+            <p data-modal-description></p>
+            <div class="modal-tags" data-modal-tags></div>
+            <dl class="modal-details" data-modal-details></dl>
+            <div class="modal-price">
+              <span data-modal-old-price></span>
+              <strong data-modal-price></strong>
+            </div>
+
+            <label class="field-label" for="item-note">Alguma observação?</label>
+            <textarea id="item-note" rows="3" placeholder="Ex: Sem cebola, molho à parte..."></textarea>
+
+            <section class="modal-addons">
+              <h3>Adicionais</h3>
+              <div data-modal-addons></div>
+            </section>
+
+            <section class="reviews">
+              <h3>Avaliações <span>(3)</span></h3>
+              <article>
+                <div class="review-head">
+                  <strong>Carlos M.</strong>
+                  <span>★★★★★</span>
+                </div>
+                <p>Melhor hambúrguer que já comi em Recife! O molho secreto é incrível.</p>
+              </article>
+              <article>
+                <div class="review-head">
+                  <strong>Fernanda L.</strong>
+                  <span>★★★★★</span>
+                </div>
+                <p>Chegou quentinho e o sabor é sensacional. Já pedi 3 vezes essa semana.</p>
+              </article>
+            </section>
+          </div>
+        </div>
+        <footer class="modal-actions">
+          <div class="quantity-stepper">
+            <button type="button" data-modal-minus aria-label="Diminuir quantidade">−</button>
+            <strong data-modal-quantity>1</strong>
+            <button type="button" data-modal-plus aria-label="Aumentar quantidade">+</button>
+          </div>
+          <button class="add-cart-button" type="button">
+            <span aria-hidden="true">🛒</span>
+            Adicionar ao carrinho
+            <strong data-modal-total>R$ 0,00</strong>
+          </button>
+        </footer>
+      </article>
+    </div>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

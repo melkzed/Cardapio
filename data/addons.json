@@ -1,0 +1,62 @@
+[
+  {
+    "id": "bacon",
+    "icon": "🥓",
+    "name": "Bacon Extra",
+    "price": 5.0
+  },
+  {
+    "id": "cheddar",
+    "icon": "🧀",
+    "name": "Queijo Cheddar",
+    "price": 4.0
+  },
+  {
+    "id": "ovo",
+    "icon": "🥚",
+    "name": "Ovo",
+    "price": 3.0
+  },
+  {
+    "id": "cebola",
+    "icon": "🧅",
+    "name": "Cebola Caramelizada",
+    "price": 4.0
+  },
+  {
+    "id": "molho",
+    "icon": "🥛",
+    "name": "Molho Especial",
+    "price": 3.0
+  },
+  {
+    "id": "hamburguer",
+    "icon": "🥩",
+    "name": "Hamburguer Extra",
+    "price": 10.0
+  },
+  {
+    "id": "catupiry",
+    "icon": "🍟",
+    "name": "Catupiry",
+    "price": 5.0
+  },
+  {
+    "id": "jalapeno",
+    "icon": "🌶️",
+    "name": "Jalapeno",
+    "price": 3.0
+  },
+  {
+    "id": "barbecue",
+    "icon": "🔥",
+    "name": "Barbecue Defumado",
+    "price": 4.0
+  },
+  {
+    "id": "picles",
+    "icon": "🥒",
+    "name": "Picles Extra",
+    "price": 2.5
+  }
+]

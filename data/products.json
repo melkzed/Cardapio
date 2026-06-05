@@ -1,0 +1,469 @@
+[
+  {
+    "id": "mordida-perfeita",
+    "name": "Mordida Perfeita",
+    "category": "promo",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Duplo smash, cheddar, bacon crocante, cebola crispy, tomate confitado e molho secreto.",
+    "oldPrice": 35.0,
+    "price": 29.9,
+    "rating": 4.9,
+    "details": {
+      "badge": "Mais pedido",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "2 smash bovinos",
+        "Cheddar",
+        "Bacon",
+        "Cebola crispy",
+        "Tomate confitado",
+        "Molho secreto"
+      ],
+      "tags": [
+        "Promo",
+        "Artesanal",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "smash-classico",
+    "name": "Smash Burger Clássico",
+    "category": "burger",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Dois smash prensados na chapa, cheddar derretido, cebola caramelizada, picles e molho especial.",
+    "oldPrice": 31.9,
+    "price": 28.9,
+    "rating": 4.8,
+    "details": {
+      "badge": "Clássico",
+      "prepTime": "18-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "2 smash bovinos",
+        "Cheddar",
+        "Cebola caramelizada",
+        "Picles",
+        "Molho especial"
+      ],
+      "tags": [
+        "Smash",
+        "Cheddar"
+      ]
+    }
+  },
+  {
+    "id": "bacon-bbq",
+    "name": "Bacon BBQ Supreme",
+    "category": "burger",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Burger artesanal 180g com bacon crocante, cheddar, anéis de cebola e barbecue defumado.",
+    "oldPrice": null,
+    "price": 34.9,
+    "rating": 4.8,
+    "details": {
+      "badge": "Defumado",
+      "prepTime": "22-32 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "Burger 180g",
+        "Cheddar",
+        "Bacon",
+        "Anéis de cebola",
+        "Barbecue defumado",
+        "Alface"
+      ],
+      "tags": [
+        "Bacon",
+        "BBQ",
+        "180g"
+      ]
+    }
+  },
+  {
+    "id": "chicken-crispy",
+    "name": "Chicken Crispy",
+    "category": "burger",
+    "image": "assets/chicken-crispy-ai.jpg",
+    "description": "Frango empanado crocante, coleslaw, picles e molho honey mustard no pão brioche.",
+    "oldPrice": null,
+    "price": 27.9,
+    "rating": 4.7,
+    "details": {
+      "badge": "Crocante",
+      "prepTime": "20-28 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "Frango empanado",
+        "Coleslaw",
+        "Picles",
+        "Alface",
+        "Honey mustard"
+      ],
+      "tags": [
+        "Frango",
+        "Crocante"
+      ]
+    }
+  },
+  {
+    "id": "veggie-premium",
+    "name": "Veggie Premium",
+    "category": "burger",
+    "image": "assets/veggie-ai.jpg",
+    "description": "Burger vegetal grelhado com queijo, rúcula, tomate, picles, cebola crispy e molho da casa.",
+    "oldPrice": null,
+    "price": 29.9,
+    "rating": 4.6,
+    "details": {
+      "badge": "Vegetariano",
+      "prepTime": "18-26 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "Burger vegetal",
+        "Queijo",
+        "Rúcula",
+        "Tomate",
+        "Picles",
+        "Cebola crispy"
+      ],
+      "tags": [
+        "Vegetariano",
+        "Leve"
+      ]
+    }
+  },
+  {
+    "id": "duplo-cheddar",
+    "name": "Duplo Cheddar Melt",
+    "category": "burger",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Dois smash prensados, cheddar duplo, cebola caramelizada e maionese temperada.",
+    "oldPrice": null,
+    "price": 33.9,
+    "rating": 4.7,
+    "details": {
+      "badge": "Cheddar duplo",
+      "prepTime": "18-26 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "2 smash bovinos",
+        "Cheddar duplo",
+        "Cebola caramelizada",
+        "Maionese temperada"
+      ],
+      "tags": [
+        "Smash",
+        "Cheddar"
+      ]
+    }
+  },
+  {
+    "id": "onion-bacon",
+    "name": "Onion Bacon",
+    "category": "burger",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Carne artesanal, cheddar, bacon, cebola empanada, alface e molho barbecue da casa.",
+    "oldPrice": 38.9,
+    "price": 35.9,
+    "rating": 4.8,
+    "details": {
+      "badge": "Cebola crispy",
+      "prepTime": "22-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "Burger bovino",
+        "Cheddar",
+        "Bacon",
+        "Cebola empanada",
+        "Alface",
+        "Barbecue"
+      ],
+      "tags": [
+        "Bacon",
+        "Cebola"
+      ]
+    }
+  },
+  {
+    "id": "jalapeno-fire",
+    "name": "Jalapeño Fire",
+    "category": "burger",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Smash picante com cheddar, jalapeño, bacon, picles e molho levemente apimentado.",
+    "oldPrice": null,
+    "price": 32.9,
+    "rating": 4.6,
+    "details": {
+      "badge": "Picante",
+      "prepTime": "20-28 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão brioche",
+        "Smash bovino",
+        "Cheddar",
+        "Jalapeño",
+        "Bacon",
+        "Picles",
+        "Molho picante"
+      ],
+      "tags": [
+        "Picante",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "combo-mordida",
+    "name": "Combo Mordida",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "Mordida Perfeita acompanhado de batata frita crocante e refrigerante gelado.",
+    "oldPrice": 52.9,
+    "price": 44.9,
+    "rating": 4.9,
+    "details": {
+      "badge": "Combo completo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Mordida Perfeita",
+        "Batata frita",
+        "Bebida gelada",
+        "Molho da casa"
+      ],
+      "tags": [
+        "Combo",
+        "Promo"
+      ]
+    }
+  },
+  {
+    "id": "combo-bacon",
+    "name": "Combo Bacon BBQ",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "Bacon BBQ Supreme com fritas, molho especial e bebida à sua escolha.",
+    "oldPrice": null,
+    "price": 48.9,
+    "rating": 4.8,
+    "details": {
+      "badge": "Defumado",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Bacon BBQ Supreme",
+        "Batata frita",
+        "Molho especial",
+        "Bebida"
+      ],
+      "tags": [
+        "Combo",
+        "BBQ"
+      ]
+    }
+  },
+  {
+    "id": "combo-chicken",
+    "name": "Combo Chicken",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "Chicken Crispy com batata frita, molho honey mustard extra e refrigerante.",
+    "oldPrice": null,
+    "price": 42.9,
+    "rating": 4.7,
+    "details": {
+      "badge": "Crocante",
+      "prepTime": "24-34 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Chicken Crispy",
+        "Batata frita",
+        "Honey mustard",
+        "Refrigerante"
+      ],
+      "tags": [
+        "Combo",
+        "Frango"
+      ]
+    }
+  },
+  {
+    "id": "batata-crispy",
+    "name": "Batata Crispy",
+    "category": "portion",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Batata crocante com cheddar cremoso, bacon em cubos, cheiro-verde e molho especial.",
+    "oldPrice": null,
+    "price": 19.9,
+    "rating": 4.6,
+    "details": {
+      "badge": "Para compartilhar",
+      "prepTime": "12-18 min",
+      "serves": "1-2 pessoas",
+      "ingredients": [
+        "Batata frita",
+        "Cheddar",
+        "Bacon",
+        "Cheiro-verde",
+        "Molho especial"
+      ],
+      "tags": [
+        "Porção",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "batata-cheddar",
+    "name": "Batata Cheddar e Bacon",
+    "category": "portion",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Porção generosa de fritas com cheddar quente e bacon crocante.",
+    "oldPrice": null,
+    "price": 24.9,
+    "rating": 4.7,
+    "details": {
+      "badge": "Cremosa",
+      "prepTime": "12-18 min",
+      "serves": "1-2 pessoas",
+      "ingredients": [
+        "Batata frita",
+        "Cheddar quente",
+        "Bacon crocante"
+      ],
+      "tags": [
+        "Porção",
+        "Cheddar"
+      ]
+    }
+  },
+  {
+    "id": "onion-rings",
+    "name": "Onion Rings",
+    "category": "portion",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Anéis de cebola empanados, sequinhos e servidos com molho especial.",
+    "oldPrice": null,
+    "price": 18.9,
+    "rating": 4.5,
+    "details": {
+      "badge": "Sequinha",
+      "prepTime": "10-16 min",
+      "serves": "1-2 pessoas",
+      "ingredients": [
+        "Cebola empanada",
+        "Tempero da casa",
+        "Molho especial"
+      ],
+      "tags": [
+        "Porção",
+        "Crocante"
+      ]
+    }
+  },
+  {
+    "id": "refrigerante",
+    "name": "Refrigerante Gelado",
+    "category": "drink",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Copo com gelo ou lata 350ml para acompanhar sua mordida.",
+    "oldPrice": null,
+    "price": 7.0,
+    "rating": 4.4,
+    "details": {
+      "badge": "Gelado",
+      "prepTime": "5 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Refrigerante",
+        "Gelo"
+      ],
+      "tags": [
+        "Bebida"
+      ]
+    }
+  },
+  {
+    "id": "milkshake",
+    "name": "Milkshake Chocolate",
+    "category": "drink",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Milkshake cremoso de chocolate com chantilly e calda.",
+    "oldPrice": null,
+    "price": 16.9,
+    "rating": 4.8,
+    "details": {
+      "badge": "Doce",
+      "prepTime": "8-12 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Sorvete",
+        "Chocolate",
+        "Chantilly",
+        "Calda"
+      ],
+      "tags": [
+        "Bebida",
+        "Sobremesa"
+      ]
+    }
+  },
+  {
+    "id": "cha-gelado",
+    "name": "Chá Gelado da Casa",
+    "category": "drink",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Bebida gelada, refrescante e levemente cítrica.",
+    "oldPrice": null,
+    "price": 9.9,
+    "rating": 4.5,
+    "details": {
+      "badge": "Refrescante",
+      "prepTime": "5 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Chá gelado",
+        "Limão",
+        "Gelo"
+      ],
+      "tags": [
+        "Bebida",
+        "Leve"
+      ]
+    }
+  },
+  {
+    "id": "promo-casal",
+    "name": "Promo Casal",
+    "category": "promo",
+    "image": "assets/combo-ai.jpg",
+    "description": "Dois burgers, duas bebidas e uma batata crispy para compartilhar.",
+    "oldPrice": 89.9,
+    "price": 74.9,
+    "rating": 4.9,
+    "details": {
+      "badge": "Melhor oferta",
+      "prepTime": "30-40 min",
+      "serves": "2 pessoas",
+      "ingredients": [
+        "2 burgers",
+        "2 bebidas",
+        "Batata crispy",
+        "Molhos da casa"
+      ],
+      "tags": [
+        "Promo",
+        "Compartilhar"
+      ]
+    }
+  }
+]

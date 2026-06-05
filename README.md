@@ -109,11 +109,11 @@ Os links ficam no footer de `index.html` e usam icones como botoes:
 - WhatsApp: `https://wa.me/5581994616516`
 - Instagram: `https://www.instagram.com/melkzedektech/`
 
-## Localizacao
+## Localização
 
 A secao de localizacao usa um iframe do Google Maps em `index.html`. Para trocar o endereco exibido, atualize o `src` do iframe e os textos da secao de localizacao.
 
-## Validacao
+## Validação
 
 Com Node instalado, voce pode validar rapidamente o JavaScript e os arquivos JSON:
 

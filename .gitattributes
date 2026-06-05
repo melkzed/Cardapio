@@ -1,2 +1,25 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize text files to LF so the project behaves consistently on Windows,
+# macOS, Linux and GitHub Pages.
+* text=auto eol=lf
+
+# Web source files
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+
+# Common config and data files
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+
+# Binary assets
+*.jpg binary -eol
+*.jpeg binary -eol
+*.png binary -eol
+*.gif binary -eol
+*.webp binary -eol
+*.ico binary -eol

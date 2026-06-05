@@ -1,176 +1,133 @@
-# Mordida Perfeita - Cardápio Delivery
+# Mordida Perfeita - Cardapio Delivery
 
-Cardápio digital responsivo para hamburgueria delivery, feito com HTML, CSS e JavaScript puro. O projeto funciona como site estático e pode ser publicado diretamente no GitHub Pages, sem backend, banco de dados em runtime ou dependências externas.
+Cardapio digital responsivo para hamburgueria delivery, feito com HTML, CSS e JavaScript puro. O projeto funciona como site estatico e pode ser publicado diretamente no GitHub Pages, sem backend, banco de dados em runtime ou dependencias externas.
+
+## Visao Geral
+
+O site apresenta produtos, detalhes do pedido, adicionais por categoria, montagem personalizada de lanche, carrinho lateral, checkout por WhatsApp, localizacao com Google Maps e uma area de avaliacoes. A pagina tambem recebeu estrutura de SEO e acessibilidade para melhorar leitura por buscadores, leitores de tela, teclado e diferentes necessidades de navegacao.
 
 ## Funcionalidades
 
-- Cardápio com imagens de IA otimizadas.
-- Produtos organizados por categoria.
+- Cardapio com produtos organizados por categoria.
 - Busca por nome, ingrediente ou tag.
-- Filtros para todos, hambúrgueres, combos, porções, bebidas e promoções.
-- Cards com selo, tempo de preparo, porção, tags, preço e preço promocional.
-- Modal de produto com imagem, ingredientes, detalhes, observação, quantidade e adicionais.
-- Seleção de adicionais com visual integrado ao cardápio.
-- Carrinho lateral com aumentar, diminuir, remover item e limpar carrinho.
+- Filtros para todos, hamburgueres, combos, porcoes, bebidas e promocoes.
+- Cards com imagem, selo, tempo de preparo, porcao, tags, preco e preco promocional.
+- Detalhe do produto com imagem, informacoes principais, quantidade e observacao no final.
+- Adicionais com botoes de aumentar e diminuir quantidade, permitindo repetir o mesmo item.
+- Adicionais separados por categoria de produto para evitar opcoes incorretas, como ovo em bebidas.
+- Grupos de adicionais em ordem: adicionais, acompanhamentos, bebidas e batatas P/M/G.
+- Area "Montar do meu jeito" para criar um lanche personalizado.
+- Carrinho lateral com estilo da marca, marcadores visuais dos adicionais, alterar quantidade, remover item e limpar carrinho.
 - Carrinho salvo no navegador por `localStorage`.
 - Checkout com entrega ou retirada.
-- Formulário com nome, WhatsApp, endereço, referência, pagamento e troco.
-- Cálculo automático de subtotal, taxa de entrega e total.
+- Formulario com nome, WhatsApp, endereco, referencia, pagamento e troco.
+- Calculo automatico de subtotal, taxa de entrega e total.
 - Pedido final montado automaticamente para WhatsApp.
+- Localizacao com Google Maps.
+- Area de avaliacoes com depoimentos de exibicao.
+- Footer com botoes de redes sociais: LinkedIn, GitHub, WhatsApp e Instagram.
+- Logo propria aplicada no site e como favicon do navegador.
+- Menu de acessibilidade com preferencias de aparencia salvas no navegador.
 - Layout responsivo para desktop e mobile.
+
+## SEO e Acessibilidade
+
+A pagina inclui recursos para melhorar indexacao e acesso por diferentes publicos:
+
+- `title`, `description`, `canonical`, `robots`, `theme-color`, `keywords` e `author`.
+- Metatags Open Graph e Twitter Card.
+- Dados estruturados JSON-LD para restaurante e lista de produtos.
+- Links internos para secoes principais.
+- Link de pular conteudo.
+- Labels e textos auxiliares para campos de busca e formulario.
+- Navegacao por teclado nas categorias com padrao de abas.
+- Estados `aria-expanded`, `aria-selected`, `aria-live`, `aria-modal` e `aria-busy`.
+- Carrinho e modal com controle de foco, fechamento por `Esc` e bloqueio do fundo com `inert`.
+- Estilos de foco visiveis.
+- Suporte a `prefers-reduced-motion`.
+- Ajustes para modo de alto contraste com `forced-colors`.
+- Imagens com textos alternativos.
+- Menu de acessibilidade com aumento/reducao de fonte, alto contraste, tema claro, espacamento de texto, fonte mais legivel, foco reforcado, links sublinhados e reducao de movimento.
 
 ## Estrutura
 
 ```text
 .
-├── index.html
-├── styles.css
-├── script.js
-├── data/
-│   ├── products.json
-│   └── addons.json
-└── assets/
-    ├── bacon-bbq-ai.jpg
-    ├── chicken-crispy-ai.jpg
-    ├── combo-ai.jpg
-    ├── drinks-ai.jpg
-    ├── hero-burger-ai.jpg
-    ├── loaded-fries-ai.jpg
-    ├── smash-double-ai.jpg
-    └── veggie-ai.jpg
+|-- index.html
+|-- script.js
+|-- css/
+|   |-- accessibility.css
+|   |-- base.css
+|   |-- builder.css
+|   |-- cart.css
+|   |-- footer.css
+|   |-- header.css
+|   |-- hero.css
+|   |-- menu.css
+|   |-- modal.css
+|   |-- promos.css
+|   |-- responsive.css
+|   `-- sections.css
+|-- js/
+|   |-- accessibility.js
+|   |-- addons.js
+|   |-- app.js
+|   |-- builder.js
+|   |-- cart.js
+|   |-- catalog.js
+|   |-- config.js
+|   |-- dom.js
+|   |-- events.js
+|   |-- modal.js
+|   |-- products.js
+|   |-- seo.js
+|   |-- state.js
+|   |-- storage.js
+|   |-- ui.js
+|   `-- utils.js
+|-- data/
+|   |-- products.json
+|   `-- addons.json
+`-- assets/
+    |-- bacon-bbq-ai.jpg
+    |-- chicken-crispy-ai.jpg
+    |-- combo-ai.jpg
+    |-- drinks-ai.jpg
+    |-- hero-burger-ai.jpg
+    |-- loaded-fries-ai.jpg
+    |-- logo.svg
+    |-- smash-double-ai.jpg
+    `-- veggie-ai.jpg
 ```
 
-## Como Rodar Localmente
+## Redes Sociais
 
-Use qualquer servidor estático. Com Python instalado:
+Os links ficam no footer de `index.html` e usam icones como botoes:
+
+- LinkedIn: `https://www.linkedin.com/in/melk-zedek`
+- GitHub: `https://github.com/melkzed`
+- WhatsApp: `https://wa.me/5581994616516`
+- Instagram: `https://www.instagram.com/melkzedektech/`
+
+## Localizacao
+
+A secao de localizacao usa um iframe do Google Maps em `index.html`. Para trocar o endereco exibido, atualize o `src` do iframe e os textos da secao de localizacao.
+
+## Validacao
+
+Com Node instalado, voce pode validar rapidamente o JavaScript e os arquivos JSON:
 
 ```powershell
-python -m http.server 8000
+node --check script.js
+Get-ChildItem js -Filter *.js | ForEach-Object { node --check $_.FullName }
+node -e "JSON.parse(require('fs').readFileSync('data/products.json', 'utf8')); JSON.parse(require('fs').readFileSync('data/addons.json', 'utf8')); console.log('JSON valido')"
 ```
-
-Depois abra:
-
-```text
-http://127.0.0.1:8000
-```
-
-## Publicar no GitHub Pages
-
-1. Envie o projeto para um repositório no GitHub.
-2. No repositório, abra `Settings`.
-3. Vá em `Pages`.
-4. Em `Build and deployment`, selecione `Deploy from a branch`.
-5. Escolha a branch principal, normalmente `main`.
-6. Escolha a pasta `/root`.
-7. Salve.
-
-O GitHub vai gerar uma URL parecida com:
-
-```text
-https://seu-usuario.github.io/nome-do-repositorio/
-```
-
-## Editar Produtos
-
-Os produtos ficam em:
-
-```text
-data/products.json
-```
-
-Cada produto segue este formato:
-
-```json
-{
-  "id": "mordida-perfeita",
-  "name": "Mordida Perfeita",
-  "category": "promo",
-  "image": "assets/hero-burger-ai.jpg",
-  "description": "Duplo smash, cheddar, bacon crocante, cebola crispy, tomate confitado e molho secreto.",
-  "oldPrice": 35,
-  "price": 29.9,
-  "rating": 4.9,
-  "details": {
-    "badge": "Mais pedido",
-    "prepTime": "20-30 min",
-    "serves": "1 pessoa",
-    "ingredients": ["Pão brioche", "2 smash bovinos", "Cheddar"],
-    "tags": ["Promo", "Artesanal", "Bacon"]
-  }
-}
-```
-
-Categorias disponíveis:
-
-```text
-burger
-combo
-portion
-drink
-promo
-```
-
-## Editar Adicionais
-
-Os adicionais ficam em:
-
-```text
-data/addons.json
-```
-
-Formato:
-
-```json
-{
-  "id": "bacon",
-  "icon": "🥓",
-  "name": "Bacon Extra",
-  "price": 5
-}
-```
-
-## WhatsApp
-
-O número do WhatsApp fica no início do arquivo `script.js`:
-
-```js
-const RESTAURANT_WHATSAPP = "5581994616516";
-```
-
-Troque pelo número real no formato:
-
-```text
-55 + DDD + número
-```
-
-Exemplo:
-
-```text
-5581994616516
-```
-
-## Endereço Atual do Site
-
-```text
-Shopping Recife
-Recife - Pernambuco
-WhatsApp: (81) 99461-6516
-```
-
-## Taxa de Entrega
-
-A taxa de entrega também fica no início do `script.js`:
-
-```js
-const DELIVERY_FEE = 6;
-```
-
-Para retirada, a taxa é automaticamente zerada.
 
 ## Tecnologias
 
 - HTML5
 - CSS3
-- JavaScript
-- JSON estático
+- JavaScript com ES Modules
+- JSON estatico
+- Google Maps embed
 - GitHub Pages

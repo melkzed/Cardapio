@@ -1,0 +1,240 @@
+.accessibility-widget {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 80;
+  max-width: min(calc(100vw - 2rem), 25rem);
+}
+
+.accessibility-toggle {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1rem;
+  border: 2px solid rgba(255, 193, 7, 0.45);
+  border-radius: 999px;
+  color: #171102;
+  background: linear-gradient(135deg, var(--yellow), var(--yellow-2));
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  font-weight: 950;
+}
+
+.accessibility-toggle span {
+  display: grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  color: var(--yellow);
+  background: #161102;
+}
+
+.accessibility-panel {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.8rem);
+  display: grid;
+  gap: 0.95rem;
+  width: min(calc(100vw - 2rem), 25rem);
+  max-height: min(78vh, 42rem);
+  overflow: auto;
+  padding: 1rem;
+  border: 1px solid rgba(255, 193, 7, 0.28);
+  border-radius: 0.75rem;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 193, 7, 0.16), transparent 10rem),
+    #101010;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.56);
+  scrollbar-gutter: stable;
+}
+
+.accessibility-panel[hidden] {
+  display: none;
+}
+
+.accessibility-panel-head {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.accessibility-panel h2,
+.accessibility-panel h3,
+.accessibility-panel p {
+  margin: 0;
+}
+
+.accessibility-panel h2 {
+  font-family: inherit;
+  font-size: 1.12rem;
+  font-weight: 950;
+  text-transform: none;
+}
+
+.accessibility-panel h3 {
+  color: var(--yellow);
+  font-size: 0.84rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.accessibility-panel p {
+  margin-top: 0.22rem;
+  color: #bdbdbd;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.accessibility-group {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.accessibility-stepper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.accessibility-stepper button,
+.accessibility-reset,
+.accessibility-option {
+  min-height: 2.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.55rem;
+  color: var(--text);
+  background: #181818;
+  font-weight: 850;
+}
+
+.accessibility-stepper button {
+  font-size: 1rem;
+}
+
+.accessibility-stepper strong {
+  min-width: 4.4rem;
+  color: var(--yellow);
+  text-align: center;
+  font-weight: 950;
+}
+
+.accessibility-option {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.55rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.75rem;
+  text-align: left;
+}
+
+.accessibility-option span {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.45rem;
+  color: #171102;
+  background: var(--yellow);
+}
+
+.accessibility-option.active,
+.accessibility-option[aria-pressed="true"],
+.accessibility-stepper button:hover:not(:disabled),
+.accessibility-reset:hover {
+  border-color: rgba(255, 193, 7, 0.72);
+  background: rgba(255, 193, 7, 0.12);
+}
+
+.accessibility-reset {
+  width: 100%;
+  color: #171102;
+  background: var(--yellow);
+}
+
+body[data-a11y-light="true"] .topbar,
+body[data-a11y-light="true"] .mobile-nav,
+body[data-a11y-light="true"] .site-footer,
+body[data-a11y-light="true"] .product-card,
+body[data-a11y-light="true"] .feature-card,
+body[data-a11y-light="true"] .testimonial-card,
+body[data-a11y-light="true"] .builder-panel,
+body[data-a11y-light="true"] .addon-option,
+body[data-a11y-light="true"] .product-modal,
+body[data-a11y-light="true"] .modal-content,
+body[data-a11y-light="true"] .modal-actions,
+body[data-a11y-light="true"] .cart-drawer,
+body[data-a11y-light="true"] .cart-summary,
+body[data-a11y-light="true"] .cart-item,
+body[data-a11y-light="true"] .cart-drawer header,
+body[data-a11y-light="true"] .reviews article,
+body[data-a11y-light="true"] .accessibility-panel {
+  color: var(--text);
+  background: var(--surface);
+}
+
+body[data-a11y-light="true"] .search-field,
+body[data-a11y-light="true"] input,
+body[data-a11y-light="true"] textarea,
+body[data-a11y-light="true"] select,
+body[data-a11y-light="true"] .delivery-toggle label,
+body[data-a11y-light="true"] .accessibility-stepper button,
+body[data-a11y-light="true"] .accessibility-option {
+  color: var(--text);
+  background: #fffdf6;
+  border-color: rgba(40, 32, 6, 0.24);
+}
+
+body[data-a11y-light="true"] p,
+body[data-a11y-light="true"] .product-info p,
+body[data-a11y-light="true"] .testimonial-card p,
+body[data-a11y-light="true"] .site-footer p,
+body[data-a11y-light="true"] .site-footer a,
+body[data-a11y-light="true"] .accessibility-panel p {
+  color: #413a2b;
+}
+
+body[data-a11y-contrast="true"] .topbar,
+body[data-a11y-contrast="true"] .mobile-nav,
+body[data-a11y-contrast="true"] .site-footer,
+body[data-a11y-contrast="true"] .product-card,
+body[data-a11y-contrast="true"] .feature-card,
+body[data-a11y-contrast="true"] .testimonial-card,
+body[data-a11y-contrast="true"] .builder-panel,
+body[data-a11y-contrast="true"] .addon-option,
+body[data-a11y-contrast="true"] .product-modal,
+body[data-a11y-contrast="true"] .modal-content,
+body[data-a11y-contrast="true"] .modal-actions,
+body[data-a11y-contrast="true"] .cart-drawer,
+body[data-a11y-contrast="true"] .cart-summary,
+body[data-a11y-contrast="true"] .cart-item,
+body[data-a11y-contrast="true"] .cart-drawer header,
+body[data-a11y-contrast="true"] .reviews article,
+body[data-a11y-contrast="true"] .accessibility-panel,
+body[data-a11y-contrast="true"] .search-field,
+body[data-a11y-contrast="true"] input,
+body[data-a11y-contrast="true"] textarea,
+body[data-a11y-contrast="true"] select,
+body[data-a11y-contrast="true"] .accessibility-stepper button,
+body[data-a11y-contrast="true"] .accessibility-option {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: #000000;
+  background-image: none;
+  box-shadow: none;
+}
+
+body[data-a11y-contrast="true"] p,
+body[data-a11y-contrast="true"] .product-info p,
+body[data-a11y-contrast="true"] .testimonial-card p,
+body[data-a11y-contrast="true"] .site-footer p,
+body[data-a11y-contrast="true"] .site-footer a,
+body[data-a11y-contrast="true"] .accessibility-panel p {
+  color: #ffffff;
+}
+

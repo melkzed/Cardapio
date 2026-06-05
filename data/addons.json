@@ -3,60 +3,168 @@
     "id": "bacon",
     "icon": "🥓",
     "name": "Bacon Extra",
-    "price": 5.0
+    "price": 5.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo", "portion"]
   },
   {
     "id": "cheddar",
     "icon": "🧀",
     "name": "Queijo Cheddar",
-    "price": 4.0
+    "price": 4.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo", "portion"]
   },
   {
     "id": "ovo",
     "icon": "🥚",
     "name": "Ovo",
-    "price": 3.0
+    "price": 3.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo"]
   },
   {
     "id": "cebola",
     "icon": "🧅",
     "name": "Cebola Caramelizada",
-    "price": 4.0
+    "price": 4.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo"]
   },
   {
     "id": "molho",
-    "icon": "🥛",
+    "icon": "🥫",
     "name": "Molho Especial",
-    "price": 3.0
+    "price": 3.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo", "portion"]
   },
   {
     "id": "hamburguer",
     "icon": "🥩",
     "name": "Hamburguer Extra",
-    "price": 10.0
+    "price": 10.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo"]
   },
   {
     "id": "catupiry",
-    "icon": "🍟",
+    "icon": "🧀",
     "name": "Catupiry",
-    "price": 5.0
+    "price": 5.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo", "portion"]
   },
   {
     "id": "jalapeno",
     "icon": "🌶️",
     "name": "Jalapeno",
-    "price": 3.0
+    "price": 3.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo"]
   },
   {
     "id": "barbecue",
     "icon": "🔥",
     "name": "Barbecue Defumado",
-    "price": 4.0
+    "price": 4.0,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo", "portion"]
   },
   {
     "id": "picles",
     "icon": "🥒",
     "name": "Picles Extra",
-    "price": 2.5
+    "price": 2.5,
+    "group": "extra",
+    "categories": ["burger", "combo", "promo"]
+  },
+  {
+    "id": "gelo",
+    "icon": "🧊",
+    "name": "Gelo Extra",
+    "price": 0.0,
+    "group": "extra",
+    "categories": ["drink"]
+  },
+  {
+    "id": "limao",
+    "icon": "🍋",
+    "name": "Limão Extra",
+    "price": 1.5,
+    "group": "extra",
+    "categories": ["drink"]
+  },
+  {
+    "id": "onion-extra",
+    "icon": "🧅",
+    "name": "Onion Rings",
+    "price": 9.0,
+    "group": "side",
+    "categories": ["burger", "combo", "promo"]
+  },
+  {
+    "id": "nuggets",
+    "icon": "🍗",
+    "name": "Nuggets Crocantes",
+    "price": 12.0,
+    "group": "side",
+    "categories": ["burger", "combo", "promo"]
+  },
+  {
+    "id": "mini-salada",
+    "icon": "🥗",
+    "name": "Mini Salada",
+    "price": 7.0,
+    "group": "side",
+    "categories": ["burger", "combo", "promo", "portion"]
+  },
+  {
+    "id": "refri-lata",
+    "icon": "🥤",
+    "name": "Refrigerante Lata",
+    "price": 7.0,
+    "group": "drink",
+    "categories": ["burger", "combo", "promo", "portion"]
+  },
+  {
+    "id": "cha-casa",
+    "icon": "🧋",
+    "name": "Chá Gelado da Casa",
+    "price": 9.9,
+    "group": "drink",
+    "categories": ["burger", "combo", "promo", "portion"]
+  },
+  {
+    "id": "agua",
+    "icon": "💧",
+    "name": "Água Mineral",
+    "price": 5.0,
+    "group": "drink",
+    "categories": ["burger", "combo", "promo", "portion"]
+  },
+  {
+    "id": "batata-p",
+    "icon": "🍟",
+    "name": "Batata P",
+    "price": 8.0,
+    "group": "fries",
+    "categories": ["burger", "combo", "promo"]
+  },
+  {
+    "id": "batata-m",
+    "icon": "🍟",
+    "name": "Batata M",
+    "price": 12.0,
+    "group": "fries",
+    "categories": ["burger", "combo", "promo"]
+  },
+  {
+    "id": "batata-g",
+    "icon": "🍟",
+    "name": "Batata G",
+    "price": 16.0,
+    "group": "fries",
+    "categories": ["burger", "combo", "promo"]
   }
 ]

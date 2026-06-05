@@ -1,0 +1,25 @@
+.promo-band {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 11.5vw 0;
+  padding: clamp(1.7rem, 4vw, 2.7rem);
+  border: 1px solid rgba(255, 193, 7, 0.23);
+  border-radius: 0.55rem;
+  background:
+    linear-gradient(90deg, rgba(255, 36, 70, 0.16), rgba(255, 193, 7, 0.1)),
+    #111111;
+}
+
+.promo-band h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.promo-band p:last-child {
+  max-width: 42rem;
+  margin: 0.65rem 0 0;
+  color: #b7b7b7;
+}
+

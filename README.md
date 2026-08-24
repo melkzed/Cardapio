@@ -55,6 +55,7 @@ A pagina inclui recursos para melhorar indexacao e acesso por diferentes publico
 .
 |-- index.html
 |-- script.js
+|-- package.json
 |-- css/
 |   |-- accessibility.css
 |   |-- base.css
@@ -85,6 +86,9 @@ A pagina inclui recursos para melhorar indexacao e acesso por diferentes publico
 |   |-- storage.js
 |   |-- ui.js
 |   `-- utils.js
+|-- scripts/
+|   |-- check.mjs
+|   `-- dev-server.mjs
 |-- data/
 |   |-- products.json
 |   `-- addons.json
@@ -113,14 +117,43 @@ Os links ficam no footer de `index.html` e usam icones como botoes:
 
 A secao de localizacao usa um iframe do Google Maps em `index.html`. Para trocar o endereco exibido, atualize o `src` do iframe e os textos da secao de localizacao.
 
+## Como rodar
+
+O site e estatico, mas precisa ser servido por HTTP: o cardapio carrega
+`data/products.json` e `data/addons.json` via `fetch`, e abrir o `index.html`
+direto pelo arquivo (`file://`) e bloqueado pelo navegador.
+
+Com Node 20 ou superior instalado:
+
+```bash
+npm run dev
+```
+
+O terminal mostra o endereco (`http://localhost:5173` por padrao). O servidor de
+desenvolvimento fica em `scripts/dev-server.mjs`, usa apenas modulos nativos do
+Node e nao exige `npm install`. Ele recarrega o navegador sozinho quando um
+arquivo do projeto muda.
+
+Para trocar a porta:
+
+```bash
+npm run dev -- 3000
+# ou
+PORT=3000 npm run dev
+```
+
+Se preferir nao usar Node, qualquer servidor estatico serve:
+
+```bash
+python -m http.server 5173
+```
+
 ## Validação
 
-Com Node instalado, voce pode validar rapidamente o JavaScript e os arquivos JSON:
+Confere a sintaxe de todo o JavaScript e o carregamento dos JSON de dados:
 
-```powershell
-node --check script.js
-Get-ChildItem js -Filter *.js | ForEach-Object { node --check $_.FullName }
-node -e "JSON.parse(require('fs').readFileSync('data/products.json', 'utf8')); JSON.parse(require('fs').readFileSync('data/addons.json', 'utf8')); console.log('JSON valido')"
+```bash
+npm run check
 ```
 
 ## Tecnologias

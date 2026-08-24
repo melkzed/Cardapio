@@ -11,22 +11,12 @@
   max-width: 42rem;
 }
 
-.eyebrow,
 .section-heading p {
   margin: 0 0 0.65rem;
-  color: var(--yellow);
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 950;
   text-transform: uppercase;
-}
-
-.hero .eyebrow {
-  display: inline-flex;
-  padding: 0.45rem 1rem;
-  border: 1px solid rgba(255, 36, 70, 0.55);
-  border-radius: 999px;
-  color: var(--red);
-  background: rgba(255, 36, 70, 0.12);
 }
 
 h1,
@@ -44,17 +34,24 @@ h1 {
 
 h1 span,
 h2 span {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .hero h1 {
-  color: var(--red);
+  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
+  color: var(--cream);
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
-.hero-copy > p:not(.eyebrow) {
+html[data-theme="light"] .hero h1 {
+  color: var(--text);
+  text-shadow: none;
+}
+
+.hero-copy > p {
   max-width: 38rem;
   margin: 1.25rem 0 0;
-  color: #b8b8b8;
+  color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.18rem);
   line-height: 1.65;
 }
@@ -73,9 +70,9 @@ h2 span {
 }
 
 .secondary-action {
-  color: var(--yellow);
-  border: 1px solid rgba(255, 193, 7, 0.75);
-  background: rgba(255, 193, 7, 0.02);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 75%, transparent);
+  background: color-mix(in srgb, var(--accent) 2%, transparent);
 }
 
 .hero-meta {
@@ -83,7 +80,7 @@ h2 span {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.7rem;
-  color: #bcbcbc;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
@@ -96,6 +93,30 @@ h2 span {
 .hero-visual img {
   width: min(100%, 28rem);
   border-radius: 1.4rem;
-  filter: drop-shadow(0 30px 80px rgba(255, 193, 7, 0.16));
+  filter: drop-shadow(0 30px 80px color-mix(in srgb, var(--accent) 16%, transparent));
 }
 
+
+.hero-logo {
+  width: clamp(5.5rem, 12vw, 8.5rem);
+  height: auto;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  filter: drop-shadow(0 14px 34px rgba(0, 0, 0, 0.45));
+}
+
+.hero-hint {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.secondary-action {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+}
+
+.secondary-action:hover {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}

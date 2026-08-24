@@ -7,8 +7,8 @@
   justify-content: space-between;
   min-height: 58px;
   padding: 0 11.5vw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(5, 5, 5, 0.9);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
   backdrop-filter: blur(18px);
 }
 
@@ -16,7 +16,7 @@
   display: inline-flex;
   gap: 0.48rem;
   align-items: center;
-  color: var(--red);
+  color: var(--cream);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: clamp(1.2rem, 2.2vw, 1.55rem);
   line-height: 1;
@@ -28,18 +28,18 @@
   width: 3rem;
   height: 3rem;
   flex: 0 0 auto;
-  filter: drop-shadow(0 0 14px rgba(255, 193, 7, 0.24));
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--accent) 24%, transparent));
 }
 
 .brand span {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .desktop-nav {
   display: flex;
   gap: clamp(1.2rem, 3vw, 2.4rem);
   align-items: center;
-  color: #cfcfcf;
+  color: var(--muted);
   font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
 
 .desktop-nav a:hover,
 .mobile-nav a:hover {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .header-actions {
@@ -69,7 +69,7 @@
 }
 
 .icon-button:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: color-mix(in srgb, var(--text) 8%, transparent);
 }
 
 .cart-count,
@@ -80,8 +80,8 @@
   height: 1.15rem;
   padding: 0 0.28rem;
   border-radius: 999px;
-  color: #161616;
-  background: var(--yellow);
+  color: var(--surface-2);
+  background: var(--accent);
   font-size: 0.72rem;
   font-weight: 900;
 }
@@ -115,9 +115,9 @@
 .primary-action,
 .add-cart-button {
   gap: 0.55rem;
-  color: #171102;
-  background: linear-gradient(135deg, var(--yellow), var(--yellow-2));
-  box-shadow: 0 0 24px rgba(255, 193, 7, 0.16);
+  color: var(--on-accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 16%, transparent);
 }
 
 .header-cta {
@@ -140,8 +140,8 @@
   grid-template-columns: 1fr;
   gap: 0.5rem;
   padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(8, 8, 8, 0.97);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  background: color-mix(in srgb, var(--surface) 97%, transparent);
 }
 
 .mobile-nav.open {
@@ -152,3 +152,30 @@ main {
   overflow: hidden;
 }
 
+
+.brand-logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.brand-name strong {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.theme-button {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.theme-button[aria-pressed="true"] {
+  color: var(--accent);
+}

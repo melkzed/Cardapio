@@ -1,468 +1,1594 @@
 [
   {
-    "id": "mordida-perfeita",
-    "name": "Mordida Perfeita",
-    "category": "promo",
+    "id": "burguer-do-chef-villa",
+    "name": "Burguer Do ChefVilla",
+    "category": "gourmet",
     "image": "assets/hero-burger-ai.jpg",
-    "description": "Duplo smash, cheddar, bacon crocante, cebola crispy, tomate confitado e molho secreto.",
-    "oldPrice": 35.0,
-    "price": 29.9,
-    "rating": 4.9,
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, anéis de cebola empanada, queijo cheddar, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 28,
     "details": {
-      "badge": "Mais pedido",
+      "badge": "Gourmet",
       "prepTime": "20-30 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Pão brioche",
-        "2 smash bovinos",
-        "Cheddar",
-        "Bacon",
-        "Cebola crispy",
-        "Tomate confitado",
-        "Molho secreto"
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Anéis de cebola empanada",
+        "Queijo cheddar",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
       ],
       "tags": [
-        "Promo",
-        "Artesanal",
+        "Cheddar",
+        "Onion rings"
+      ]
+    }
+  },
+  {
+    "id": "villa-burguer-nordestino",
+    "name": "Villa Burguer Nordestino",
+    "category": "gourmet",
+    "image": "assets/veggie-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, queijo coalho com mel ou sem mel, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 28,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Queijo coalho com mel ou sem mel",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Coalho",
+        "Nordestino"
+      ]
+    }
+  },
+  {
+    "id": "villa-burguer-da-casa",
+    "name": "Villa Burguer Da Casa",
+    "category": "gourmet",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, queijo cheddar ou mussarela, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 22.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Queijo cheddar ou mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Da casa",
+        "Clássico"
+      ]
+    }
+  },
+  {
+    "id": "villa-burguer-bacon",
+    "name": "Villa Burguer Bacon",
+    "category": "gourmet",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, queijo cheddar ou mussarela, bacon, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 26,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Queijo cheddar ou mussarela",
+        "Bacon",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
         "Bacon"
       ]
     }
   },
   {
-    "id": "smash-classico",
-    "name": "Smash Burger Clássico",
-    "category": "burger",
-    "image": "assets/smash-double-ai.jpg",
-    "description": "Dois smash prensados na chapa, cheddar derretido, cebola caramelizada, picles e molho especial.",
-    "oldPrice": 31.9,
-    "price": 28.9,
-    "rating": 4.8,
+    "id": "villa-egg",
+    "name": "Villa Egg",
+    "category": "gourmet",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, queijo cheddar ou mussarela, ovo, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 26,
     "details": {
-      "badge": "Clássico",
-      "prepTime": "18-25 min",
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Pão brioche",
-        "2 smash bovinos",
-        "Cheddar",
-        "Cebola caramelizada",
-        "Picles",
-        "Molho especial"
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Queijo cheddar ou mussarela",
+        "Ovo",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
       ],
       "tags": [
-        "Smash",
+        "Ovo"
+      ]
+    }
+  },
+  {
+    "id": "villa-egg-bacon",
+    "name": "Villa Egg Bacon",
+    "category": "gourmet",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g de carne bovina, 2 queijos cheddar, ovo, bacon, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 28.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "2 queijos cheddar",
+        "Ovo",
+        "Bacon",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Ovo",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "villa-suino",
+    "name": "Villa Suíno",
+    "category": "gourmet",
+    "image": "assets/veggie-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g suíno, queijo mussarela, salada, cebola crispy ou caramelizada e geleia de pimenta de abacaxi.",
+    "price": 29.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne suína",
+        "Queijo mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "Geleia de pimenta de abacaxi"
+      ],
+      "tags": [
+        "Suíno",
+        "Agridoce"
+      ]
+    }
+  },
+  {
+    "id": "villa-coracao",
+    "name": "Villa Coração",
+    "category": "gourmet",
+    "image": "assets/chicken-crispy-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g de coração de galinha, queijo mussarela, salada e 2 molhos especiais.",
+    "price": 28.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de coração de galinha",
+        "Queijo mussarela",
+        "Salada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Coração"
+      ]
+    }
+  },
+  {
+    "id": "villa-reino",
+    "name": "Villa Reino",
+    "category": "gourmet",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g de carne bovina, queijo do reino, salada, cebola caramelizada e molho barbecue.",
+    "price": 28,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Queijo do reino",
+        "Salada",
+        "Cebola caramelizada",
+        "Molho barbecue"
+      ],
+      "tags": [
+        "Queijo do reino",
+        "Barbecue"
+      ]
+    }
+  },
+  {
+    "id": "villa-duplo-cheddar",
+    "name": "Villa Duplo Cheddar",
+    "category": "gourmet",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 2 carnes de 120g bovina ou frango, 2 queijo cheddar, salada, cebola caramelizada ou crispy, bacon e 3 molhos especiais.",
+    "price": 32.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "2 carnes de 120g bovina ou frango",
+        "2 queijos cheddar",
+        "Salada",
+        "Cebola caramelizada ou crispy",
+        "Bacon",
+        "3 molhos especiais"
+      ],
+      "tags": [
+        "Duplo",
         "Cheddar"
       ]
     }
   },
   {
-    "id": "bacon-bbq",
-    "name": "Bacon BBQ Supreme",
-    "category": "burger",
-    "image": "assets/bacon-bbq-ai.jpg",
-    "description": "Burger artesanal 180g com bacon crocante, cheddar, anéis de cebola e barbecue defumado.",
-    "oldPrice": null,
-    "price": 34.9,
-    "rating": 4.8,
+    "id": "villa-picanha",
+    "name": "Villa Picanha",
+    "category": "gourmet",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g de carne picanha, queijo cheddar ou mussarela, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 28,
     "details": {
-      "badge": "Defumado",
-      "prepTime": "22-32 min",
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Pão brioche",
-        "Burger 180g",
-        "Cheddar",
-        "Bacon",
-        "Anéis de cebola",
-        "Barbecue defumado",
-        "Alface"
+        "Pão quantum brioche ou australiano",
+        "120g de carne picanha",
+        "Queijo cheddar ou mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
       ],
       "tags": [
-        "Bacon",
-        "BBQ",
-        "180g"
+        "Picanha"
       ]
     }
   },
   {
-    "id": "chicken-crispy",
-    "name": "Chicken Crispy",
-    "category": "burger",
-    "image": "assets/chicken-crispy-ai.jpg",
-    "description": "Frango empanado crocante, coleslaw, picles e molho honey mustard no pão brioche.",
-    "oldPrice": null,
-    "price": 27.9,
-    "rating": 4.7,
+    "id": "villa-picanha-150g",
+    "name": "Villa Picanha 150g",
+    "category": "gourmet",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 150g de carne de picanha, bacon, queijo cheddar ou mussarela, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 35,
     "details": {
-      "badge": "Crocante",
-      "prepTime": "20-28 min",
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Pão brioche",
-        "Frango empanado",
-        "Coleslaw",
-        "Picles",
-        "Alface",
-        "Honey mustard"
+        "Pão quantum brioche ou australiano",
+        "150g de carne de picanha",
+        "Bacon",
+        "Queijo cheddar ou mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Picanha",
+        "150g"
+      ]
+    }
+  },
+  {
+    "id": "x-tudo",
+    "name": "X tudo",
+    "category": "gourmet",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão quantum brioche, 120g carne bovina, presunto, mussarela, ovo, salsicha, bacon, opcional: batata palha, milho salada e molho especial.",
+    "price": 37,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche",
+        "120g de carne bovina",
+        "Presunto",
+        "Mussarela",
+        "Ovo",
+        "Salsicha",
+        "Bacon",
+        "Opcional: batata palha e milho",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Completo"
+      ]
+    }
+  },
+  {
+    "id": "nordestino",
+    "name": "Nordestino",
+    "category": "gourmet",
+    "image": "assets/veggie-ai.jpg",
+    "description": "Pão quantum brioche, 120g carne bovina, queijo coalho, mel, charque desfiada, salada e molho especial.",
+    "price": 33,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche",
+        "120g de carne bovina",
+        "Queijo coalho",
+        "Mel",
+        "Charque desfiada",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Charque",
+        "Coalho"
+      ]
+    }
+  },
+  {
+    "id": "villa-costela",
+    "name": "Villa Costela",
+    "category": "gourmet",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão quantum brioche, 120g carne bovina, costela desfiada ao molho barbecue, salada e molho especial.",
+    "price": 37,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche",
+        "120g de carne bovina",
+        "Costela desfiada ao molho barbecue",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Costela",
+        "Barbecue"
+      ]
+    }
+  },
+  {
+    "id": "villa-camarao",
+    "name": "Villa Camarão",
+    "category": "gourmet",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 150g de carne bovina, filé de camarão, cream cheese, salada, queijo mussarela, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 36,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "150g de carne bovina",
+        "Filé de camarão",
+        "Cream cheese",
+        "Queijo mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Camarão"
+      ]
+    }
+  },
+  {
+    "id": "villa-cupim",
+    "name": "Villa Cupim",
+    "category": "gourmet",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 150g de carne bovina, cupim desfiado, queijo coalho, salada, cebola caramelizada e 2 molhos especiais.",
+    "price": 35,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "150g de carne bovina",
+        "Cupim desfiado",
+        "Queijo coalho",
+        "Salada",
+        "Cebola caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Cupim"
+      ]
+    }
+  },
+  {
+    "id": "villa-bacon-cream-cheese",
+    "name": "Villa Bacon Com Cream Cheese",
+    "category": "gourmet",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 150g de carne bovina, bacon, cream cheese, queijo cheddar, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 30.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "150g de carne bovina",
+        "Bacon",
+        "Cream cheese",
+        "Queijo cheddar",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Bacon",
+        "Cream cheese"
+      ]
+    }
+  },
+  {
+    "id": "villa-chicken",
+    "name": "Villa Chicken",
+    "category": "gourmet",
+    "image": "assets/chicken-crispy-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, hambúrguer empanado de frango, queijo mussarela, salada, cebola crispy ou caramelizada e 2 molhos especiais.",
+    "price": 21,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "Hambúrguer empanado de frango",
+        "Queijo mussarela",
+        "Salada",
+        "Cebola crispy ou caramelizada",
+        "2 molhos especiais"
       ],
       "tags": [
         "Frango",
+        "Empanado"
+      ]
+    }
+  },
+  {
+    "id": "villa-charque",
+    "name": "Villa Charque",
+    "category": "gourmet",
+    "image": "assets/veggie-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 150g de carne bovina, charque desfiada, queijo coalho, mel, salada, cebola caramelizada e 2 molhos especiais.",
+    "price": 33.99,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "150g de carne bovina",
+        "Charque desfiada",
+        "Queijo coalho",
+        "Mel",
+        "Salada",
+        "Cebola caramelizada",
+        "2 molhos especiais"
+      ],
+      "tags": [
+        "Charque",
+        "Coalho"
+      ]
+    }
+  },
+  {
+    "id": "villa-calabresa",
+    "name": "Villa Calabresa",
+    "category": "gourmet",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão quantum brioche ou australiano, 120g carne bovina, calabresa, queijo cheddar, salada e molho especial.",
+    "price": 27.9,
+    "details": {
+      "badge": "Gourmet",
+      "prepTime": "20-30 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão quantum brioche ou australiano",
+        "120g de carne bovina",
+        "Calabresa",
+        "Queijo cheddar",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Calabresa"
+      ]
+    }
+  },
+  {
+    "id": "x-burguer",
+    "name": "X Burguer",
+    "category": "tradicional",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão bola, hambúrguer, queijo mussarela, salada e molho especial.",
+    "price": 15,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão bola",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Simples"
+      ]
+    }
+  },
+  {
+    "id": "x-bacon",
+    "name": "X Bacon",
+    "category": "tradicional",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão bola, hambúrguer, queijo mussarela, bacon, salada e molho especial.",
+    "price": 18,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão bola",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Bacon",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "x-egg",
+    "name": "X Egg",
+    "category": "tradicional",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão bola, hambúrguer, queijo mussarela, ovo, salada e molho especial.",
+    "price": 18,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão bola",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Ovo",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Ovo"
+      ]
+    }
+  },
+  {
+    "id": "americano",
+    "name": "Americano",
+    "category": "tradicional",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão caixa, queijo mussarela, presunto, ovo, salada e molho especial.",
+    "price": 18,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão caixa",
+        "Queijo mussarela",
+        "Presunto",
+        "Ovo",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Presunto"
+      ]
+    }
+  },
+  {
+    "id": "x-egg-bacon",
+    "name": "X Egg Bacon",
+    "category": "tradicional",
+    "image": "assets/bacon-bbq-ai.jpg",
+    "description": "Pão bola, hambúrguer, queijo mussarela, bacon, ovo, salada e molho especial.",
+    "price": 23,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão bola",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Bacon",
+        "Ovo",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Ovo",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "x-calabresa",
+    "name": "X Calabresa",
+    "category": "tradicional",
+    "image": "assets/smash-double-ai.jpg",
+    "description": "Pão bola, hambúrguer, queijo mussarela, calabresa, salada e molho especial.",
+    "price": 21,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão bola",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Calabresa",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Calabresa"
+      ]
+    }
+  },
+  {
+    "id": "america-burguer",
+    "name": "América Burguer",
+    "category": "tradicional",
+    "image": "assets/hero-burger-ai.jpg",
+    "description": "Pão de caixa, hambúrguer, queijo mussarela, presunto, ovo, salada e molho especial.",
+    "price": 24,
+    "details": {
+      "badge": "Tradicional",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão de caixa",
+        "Hambúrguer",
+        "Queijo mussarela",
+        "Presunto",
+        "Ovo",
+        "Salada",
+        "Molho especial"
+      ],
+      "tags": [
+        "Presunto",
+        "Ovo"
+      ]
+    }
+  },
+  {
+    "id": "hot-dog-tradicional",
+    "name": "Hot Dog Tradicional da Casa",
+    "category": "hotdog",
+    "image": null,
+    "description": "Pão, salsicha, carne moída, verduras, batata palha, molho especial e queijo ralado.",
+    "price": 12,
+    "details": {
+      "badge": "Hot dog",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão",
+        "Salsicha",
+        "Carne moída",
+        "Verduras",
+        "Batata palha",
+        "Molho especial",
+        "Queijo ralado"
+      ],
+      "tags": [
+        "Tradicional"
+      ]
+    }
+  },
+  {
+    "id": "hot-dog-gourmet",
+    "name": "Hot Dog Gourmet",
+    "category": "hotdog",
+    "image": null,
+    "description": "Pão, salsicha, carne moída ou bacon, queijo mussarela ou coalho maçaricado e barbecue.",
+    "price": 19,
+    "details": {
+      "badge": "Hot dog",
+      "prepTime": "15-25 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Pão",
+        "Salsicha",
+        "Carne moída ou bacon",
+        "Queijo mussarela ou coalho maçaricado",
+        "Barbecue"
+      ],
+      "tags": [
+        "Gourmet",
+        "Maçaricado"
+      ]
+    }
+  },
+  {
+    "id": "combo-1",
+    "name": "Combo 1",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "Batata G + refrigerante lata.",
+    "price": 20,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Batata frita G",
+        "Refrigerante lata"
+      ],
+      "tags": [
+        "Combo"
+      ]
+    }
+  },
+  {
+    "id": "combo-2",
+    "name": "Combo 2",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "2 super hot dog + 1 batata + 1 refrigerante 1L.",
+    "price": 44,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "2 pessoas",
+      "ingredients": [
+        "2 super hot dogs",
+        "1 batata frita",
+        "1 refrigerante 1L"
+      ],
+      "tags": [
+        "Combo",
+        "Hot dog"
+      ]
+    }
+  },
+  {
+    "id": "combo-3",
+    "name": "Combo 3",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "2 Villa da casa + 1 batata + 1 refrigerante lata.",
+    "price": 59.9,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "2 pessoas",
+      "ingredients": [
+        "2 Villa Burguer da Casa",
+        "1 batata frita",
+        "1 refrigerante lata"
+      ],
+      "tags": [
+        "Combo",
+        "Casal"
+      ]
+    }
+  },
+  {
+    "id": "combo-4",
+    "name": "Combo 4",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "2 Villa bacon + 2 batata + 1 refrigerante 1L.",
+    "price": 73.9,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "2 pessoas",
+      "ingredients": [
+        "2 Villa Burguer Bacon",
+        "2 batatas fritas",
+        "1 refrigerante 1L"
+      ],
+      "tags": [
+        "Combo",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "combo-5",
+    "name": "Combo 5",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "1 X Burguer tradicional cheddar + 1 batata + 1 refrigerante mini.",
+    "price": 29.99,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "1 X Burguer tradicional com cheddar",
+        "1 batata frita",
+        "1 refrigerante mini"
+      ],
+      "tags": [
+        "Combo",
+        "Individual"
+      ]
+    }
+  },
+  {
+    "id": "combo-6",
+    "name": "Combo 6",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "1 Villa bacon + 1 batata + 1 refrigerante lata.",
+    "price": 41.99,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "1 Villa Burguer Bacon",
+        "1 batata frita",
+        "1 refrigerante lata"
+      ],
+      "tags": [
+        "Combo",
+        "Bacon"
+      ]
+    }
+  },
+  {
+    "id": "combo-7",
+    "name": "Combo 7",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "1 Villa da casa + 1 refrigerante lata.",
+    "price": 30,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "1 Villa Burguer da Casa",
+        "1 refrigerante lata"
+      ],
+      "tags": [
+        "Combo",
+        "Individual"
+      ]
+    }
+  },
+  {
+    "id": "combo-8",
+    "name": "Combo 8",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "1 Picanha + 1 batata + 1 coca Ks.",
+    "price": 41,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "1 Villa Picanha",
+        "1 batata frita",
+        "1 Coca-Cola Ks"
+      ],
+      "tags": [
+        "Combo",
+        "Picanha"
+      ]
+    }
+  },
+  {
+    "id": "combo-familia",
+    "name": "Combo Família",
+    "category": "combo",
+    "image": "assets/combo-ai.jpg",
+    "description": "3 da casa + 2 batata + 1 refrigerante 2L.",
+    "price": 80,
+    "details": {
+      "badge": "Combo",
+      "prepTime": "25-35 min",
+      "serves": "3 pessoas",
+      "ingredients": [
+        "3 Villa Burguer da Casa",
+        "2 batatas fritas",
+        "1 refrigerante 2L"
+      ],
+      "tags": [
+        "Combo",
+        "Família"
+      ]
+    }
+  },
+  {
+    "id": "batata-frita",
+    "name": "Batata Frita",
+    "category": "porcao",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Porção de batata frita crocante.",
+    "price": 14,
+    "details": {
+      "badge": "Porção",
+      "prepTime": "15-25 min",
+      "serves": "2 pessoas",
+      "ingredients": [
+        "Batata frita"
+      ],
+      "tags": [
         "Crocante"
       ]
     }
   },
   {
-    "id": "veggie-premium",
-    "name": "Veggie Premium",
-    "category": "burger",
-    "image": "assets/veggie-ai.jpg",
-    "description": "Burger vegetal grelhado com queijo, rúcula, tomate, picles, cebola crispy e molho da casa.",
-    "oldPrice": null,
-    "price": 29.9,
-    "rating": 4.6,
+    "id": "batata-cheddar-bacon",
+    "name": "Batata Frita com Cheddar e Bacon",
+    "category": "porcao",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Porção de batata frita com cheddar e bacon.",
+    "price": 20,
     "details": {
-      "badge": "Vegetariano",
-      "prepTime": "18-26 min",
-      "serves": "1 pessoa",
+      "badge": "Porção",
+      "prepTime": "15-25 min",
+      "serves": "2 pessoas",
       "ingredients": [
-        "Pão brioche",
-        "Burger vegetal",
-        "Queijo",
-        "Rúcula",
-        "Tomate",
-        "Picles",
-        "Cebola crispy"
-      ],
-      "tags": [
-        "Vegetariano",
-        "Leve"
-      ]
-    }
-  },
-  {
-    "id": "duplo-cheddar",
-    "name": "Duplo Cheddar Melt",
-    "category": "burger",
-    "image": "assets/smash-double-ai.jpg",
-    "description": "Dois smash prensados, cheddar duplo, cebola caramelizada e maionese temperada.",
-    "oldPrice": null,
-    "price": 33.9,
-    "rating": 4.7,
-    "details": {
-      "badge": "Cheddar duplo",
-      "prepTime": "18-26 min",
-      "serves": "1 pessoa",
-      "ingredients": [
-        "Pão brioche",
-        "2 smash bovinos",
-        "Cheddar duplo",
-        "Cebola caramelizada",
-        "Maionese temperada"
-      ],
-      "tags": [
-        "Smash",
-        "Cheddar"
-      ]
-    }
-  },
-  {
-    "id": "onion-bacon",
-    "name": "Onion Bacon",
-    "category": "burger",
-    "image": "assets/bacon-bbq-ai.jpg",
-    "description": "Carne artesanal, cheddar, bacon, cebola empanada, alface e molho barbecue da casa.",
-    "oldPrice": 38.9,
-    "price": 35.9,
-    "rating": 4.8,
-    "details": {
-      "badge": "Cebola crispy",
-      "prepTime": "22-30 min",
-      "serves": "1 pessoa",
-      "ingredients": [
-        "Pão brioche",
-        "Burger bovino",
+        "Batata frita",
         "Cheddar",
-        "Bacon",
-        "Cebola empanada",
-        "Alface",
-        "Barbecue"
+        "Bacon"
       ],
       "tags": [
-        "Bacon",
-        "Cebola"
-      ]
-    }
-  },
-  {
-    "id": "jalapeno-fire",
-    "name": "Jalapeño Fire",
-    "category": "burger",
-    "image": "assets/hero-burger-ai.jpg",
-    "description": "Smash picante com cheddar, jalapeño, bacon, picles e molho levemente apimentado.",
-    "oldPrice": null,
-    "price": 32.9,
-    "rating": 4.6,
-    "details": {
-      "badge": "Picante",
-      "prepTime": "20-28 min",
-      "serves": "1 pessoa",
-      "ingredients": [
-        "Pão brioche",
-        "Smash bovino",
         "Cheddar",
-        "Jalapeño",
-        "Bacon",
-        "Picles",
-        "Molho picante"
-      ],
-      "tags": [
-        "Picante",
         "Bacon"
       ]
     }
   },
   {
-    "id": "combo-mordida",
-    "name": "Combo Mordida",
-    "category": "combo",
-    "image": "assets/combo-ai.jpg",
-    "description": "Mordida Perfeita acompanhado de batata frita crocante e refrigerante gelado.",
-    "oldPrice": 52.9,
-    "price": 44.9,
-    "rating": 4.9,
+    "id": "batata-cheddar-costela",
+    "name": "Batata Frita com Cheddar e Costela",
+    "category": "porcao",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Porção de batata frita com cheddar e costela desfiada.",
+    "price": 25,
     "details": {
-      "badge": "Combo completo",
-      "prepTime": "25-35 min",
-      "serves": "1 pessoa",
+      "badge": "Porção",
+      "prepTime": "15-25 min",
+      "serves": "2 pessoas",
       "ingredients": [
-        "Mordida Perfeita",
         "Batata frita",
-        "Bebida gelada",
-        "Molho da casa"
+        "Cheddar",
+        "Costela desfiada"
       ],
       "tags": [
-        "Combo",
-        "Promo"
+        "Cheddar",
+        "Costela"
       ]
     }
   },
   {
-    "id": "combo-bacon",
-    "name": "Combo Bacon BBQ",
-    "category": "combo",
-    "image": "assets/combo-ai.jpg",
-    "description": "Bacon BBQ Supreme com fritas, molho especial e bebida à sua escolha.",
-    "oldPrice": null,
-    "price": 48.9,
-    "rating": 4.8,
+    "id": "porcao-nuggets",
+    "name": "Porção de Nuggets",
+    "category": "porcao",
+    "image": "assets/loaded-fries-ai.jpg",
+    "description": "Porção de nuggets de frango.",
+    "price": 16,
     "details": {
-      "badge": "Defumado",
-      "prepTime": "25-35 min",
-      "serves": "1 pessoa",
+      "badge": "Porção",
+      "prepTime": "15-25 min",
+      "serves": "2 pessoas",
       "ingredients": [
-        "Bacon BBQ Supreme",
-        "Batata frita",
-        "Molho especial",
-        "Bebida"
+        "Nuggets de frango"
       ],
       "tags": [
-        "Combo",
-        "BBQ"
-      ]
-    }
-  },
-  {
-    "id": "combo-chicken",
-    "name": "Combo Chicken",
-    "category": "combo",
-    "image": "assets/combo-ai.jpg",
-    "description": "Chicken Crispy com batata frita, molho honey mustard extra e refrigerante.",
-    "oldPrice": null,
-    "price": 42.9,
-    "rating": 4.7,
-    "details": {
-      "badge": "Crocante",
-      "prepTime": "24-34 min",
-      "serves": "1 pessoa",
-      "ingredients": [
-        "Chicken Crispy",
-        "Batata frita",
-        "Honey mustard",
-        "Refrigerante"
-      ],
-      "tags": [
-        "Combo",
         "Frango"
       ]
     }
   },
   {
-    "id": "batata-crispy",
-    "name": "Batata Crispy",
-    "category": "portion",
+    "id": "porcao-aneis-cebola",
+    "name": "Porção de Anéis de Cebola",
+    "category": "porcao",
     "image": "assets/loaded-fries-ai.jpg",
-    "description": "Batata crocante com cheddar cremoso, bacon em cubos, cheiro-verde e molho especial.",
-    "oldPrice": null,
-    "price": 19.9,
-    "rating": 4.6,
+    "description": "Porção de anéis de cebola empanados.",
+    "price": 16,
     "details": {
-      "badge": "Para compartilhar",
-      "prepTime": "12-18 min",
-      "serves": "1-2 pessoas",
+      "badge": "Porção",
+      "prepTime": "15-25 min",
+      "serves": "2 pessoas",
       "ingredients": [
-        "Batata frita",
-        "Cheddar",
-        "Bacon",
-        "Cheiro-verde",
-        "Molho especial"
+        "Anéis de cebola empanados"
       ],
       "tags": [
-        "Porção",
-        "Bacon"
+        "Empanado"
       ]
     }
   },
   {
-    "id": "batata-cheddar",
-    "name": "Batata Cheddar e Bacon",
-    "category": "portion",
-    "image": "assets/loaded-fries-ai.jpg",
-    "description": "Porção generosa de fritas com cheddar quente e bacon crocante.",
-    "oldPrice": null,
-    "price": 24.9,
-    "rating": 4.7,
+    "id": "coxinha-frango",
+    "name": "Coxinha de Frango",
+    "category": "coxinha",
+    "image": null,
+    "description": "Coxinha de frango.",
+    "price": 9,
     "details": {
-      "badge": "Cremosa",
-      "prepTime": "12-18 min",
-      "serves": "1-2 pessoas",
-      "ingredients": [
-        "Batata frita",
-        "Cheddar quente",
-        "Bacon crocante"
-      ],
-      "tags": [
-        "Porção",
-        "Cheddar"
-      ]
-    }
-  },
-  {
-    "id": "onion-rings",
-    "name": "Onion Rings",
-    "category": "portion",
-    "image": "assets/loaded-fries-ai.jpg",
-    "description": "Anéis de cebola empanados, sequinhos e servidos com molho especial.",
-    "oldPrice": null,
-    "price": 18.9,
-    "rating": 4.5,
-    "details": {
-      "badge": "Sequinha",
-      "prepTime": "10-16 min",
-      "serves": "1-2 pessoas",
-      "ingredients": [
-        "Cebola empanada",
-        "Tempero da casa",
-        "Molho especial"
-      ],
-      "tags": [
-        "Porção",
-        "Crocante"
-      ]
-    }
-  },
-  {
-    "id": "refrigerante",
-    "name": "Refrigerante Gelado",
-    "category": "drink",
-    "image": "assets/drinks-ai.jpg",
-    "description": "Copo com gelo ou lata 350ml para acompanhar sua mordida.",
-    "oldPrice": null,
-    "price": 7.0,
-    "rating": 4.4,
-    "details": {
-      "badge": "Gelado",
-      "prepTime": "5 min",
+      "badge": "Coxinha",
+      "prepTime": "10-15 min",
       "serves": "1 pessoa",
       "ingredients": [
+        "Frango"
+      ],
+      "tags": [
+        "Salgado"
+      ]
+    }
+  },
+  {
+    "id": "coxinha-frango-requeijao",
+    "name": "Coxinha de Frango com Requeijão",
+    "category": "coxinha",
+    "image": null,
+    "description": "Coxinha de frango com requeijão.",
+    "price": 10,
+    "details": {
+      "badge": "Coxinha",
+      "prepTime": "10-15 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Frango",
+        "Requeijão"
+      ],
+      "tags": [
+        "Salgado",
+        "Requeijão"
+      ]
+    }
+  },
+  {
+    "id": "coxinha-frango-catupiry",
+    "name": "Coxinha de Frango com Catupiry",
+    "category": "coxinha",
+    "image": null,
+    "description": "Coxinha de frango com catupiry.",
+    "price": 10,
+    "details": {
+      "badge": "Coxinha",
+      "prepTime": "10-15 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Frango",
+        "Catupiry"
+      ],
+      "tags": [
+        "Salgado",
+        "Catupiry"
+      ]
+    }
+  },
+  {
+    "id": "milk-shake-ovomaltine",
+    "name": "Milk-shake de Ovomaltine 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Milk-shake de Ovomaltine, copo de 350ml.",
+    "price": 17,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Ovomaltine"
+      ],
+      "tags": [
+        "Milk-shake"
+      ]
+    }
+  },
+  {
+    "id": "milk-shake-morango",
+    "name": "Milk-shake de Morango 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Milk-shake de morango, copo de 350ml.",
+    "price": 17,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Morango"
+      ],
+      "tags": [
+        "Milk-shake"
+      ]
+    }
+  },
+  {
+    "id": "milk-shake-pacoca",
+    "name": "Milk-shake de Paçoca 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Milk-shake de paçoca, copo de 350ml.",
+    "price": 17,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Paçoca"
+      ],
+      "tags": [
+        "Milk-shake"
+      ]
+    }
+  },
+  {
+    "id": "milk-shake-acai",
+    "name": "Milk-shake de Açaí 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Milk-shake de açaí, copo de 350ml.",
+    "price": 17,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Açaí"
+      ],
+      "tags": [
+        "Milk-shake"
+      ]
+    }
+  },
+  {
+    "id": "h2o-limao",
+    "name": "H2O Limão 500ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "H2O sabor limão, garrafa de 500ml.",
+    "price": 8,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "H2O limão 500ml"
+      ],
+      "tags": [
+        "Sem álcool"
+      ]
+    }
+  },
+  {
+    "id": "h2o-limoneto",
+    "name": "H2O Limoneto 500ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "H2O sabor limoneto, garrafa de 500ml.",
+    "price": 8,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "H2O limoneto 500ml"
+      ],
+      "tags": [
+        "Sem álcool"
+      ]
+    }
+  },
+  {
+    "id": "coca-ks",
+    "name": "Coca-Cola Ks 290ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Coca-Cola Ks, garrafa de 290ml.",
+    "price": 6,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Coca-Cola Ks 290ml"
+      ],
+      "tags": [
+        "Refrigerante"
+      ]
+    }
+  },
+  {
+    "id": "refrigerante-lata",
+    "name": "Refrigerante Lata 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Refrigerante em lata de 350ml. Informe o sabor na observação.",
+    "price": 7,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Refrigerante lata 350ml"
+      ],
+      "tags": [
+        "Refrigerante"
+      ]
+    }
+  },
+  {
+    "id": "refrigerante-1l",
+    "name": "Refrigerante 1L",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Refrigerante de 1 litro. Informe o sabor na observação.",
+    "price": 12,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Refrigerante 1L"
+      ],
+      "tags": [
+        "Refrigerante"
+      ]
+    }
+  },
+  {
+    "id": "refrigerante-15l",
+    "name": "Refrigerante 1,5L",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Refrigerante de 1,5 litro. Informe o sabor na observação.",
+    "price": 14,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Refrigerante 1,5L"
+      ],
+      "tags": [
+        "Refrigerante"
+      ]
+    }
+  },
+  {
+    "id": "refrigerante-2l",
+    "name": "Refrigerante 2L",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Refrigerante de 2 litros. Informe o sabor na observação.",
+    "price": 16,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Refrigerante 2L"
+      ],
+      "tags": [
         "Refrigerante",
-        "Gelo"
-      ],
-      "tags": [
-        "Bebida"
+        "Família"
       ]
     }
   },
   {
-    "id": "milkshake",
-    "name": "Milkshake Chocolate",
-    "category": "drink",
+    "id": "refrigerante-mini",
+    "name": "Refrigerante Mini",
+    "category": "bebida",
     "image": "assets/drinks-ai.jpg",
-    "description": "Milkshake cremoso de chocolate com chantilly e calda.",
-    "oldPrice": null,
-    "price": 16.9,
-    "rating": 4.8,
+    "description": "Refrigerante mini. Informe o sabor na observação.",
+    "price": 4,
     "details": {
-      "badge": "Doce",
-      "prepTime": "8-12 min",
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Sorvete",
-        "Chocolate",
-        "Chantilly",
-        "Calda"
+        "Refrigerante mini"
       ],
       "tags": [
-        "Bebida",
+        "Refrigerante"
+      ]
+    }
+  },
+  {
+    "id": "agua-sem-gas",
+    "name": "Água Mineral 500ml sem Gás",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Água mineral sem gás, garrafa de 500ml.",
+    "price": 3,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Água mineral 500ml sem gás"
+      ],
+      "tags": [
+        "Sem álcool"
+      ]
+    }
+  },
+  {
+    "id": "agua-com-gas",
+    "name": "Água Mineral 500ml com Gás",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Água mineral com gás, garrafa de 500ml.",
+    "price": 4,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Água mineral 500ml com gás"
+      ],
+      "tags": [
+        "Sem álcool"
+      ]
+    }
+  },
+  {
+    "id": "suco-del-vale-laranja",
+    "name": "Suco Del Valle Laranja",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Suco Del Valle sabor laranja.",
+    "price": 8,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Suco Del Valle laranja"
+      ],
+      "tags": [
+        "Suco"
+      ]
+    }
+  },
+  {
+    "id": "suco-del-vale-uva",
+    "name": "Suco Del Valle Uva",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Suco Del Valle sabor uva.",
+    "price": 8,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Suco Del Valle uva"
+      ],
+      "tags": [
+        "Suco"
+      ]
+    }
+  },
+  {
+    "id": "suco-polpa",
+    "name": "Suco de Polpa 350ml",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Suco de polpa, copo de 350ml. Informe o sabor na observação.",
+    "price": 10,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Suco de polpa 350ml"
+      ],
+      "tags": [
+        "Suco",
+        "Natural"
+      ]
+    }
+  },
+  {
+    "id": "brahma",
+    "name": "Brahma",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Cerveja Brahma. Venda proibida para menores de 18 anos.",
+    "price": 8,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Cerveja Brahma"
+      ],
+      "tags": [
+        "Cerveja",
+        "+18"
+      ]
+    }
+  },
+  {
+    "id": "heineken-long-neck",
+    "name": "Heineken Long Neck",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Cerveja Heineken long neck. Venda proibida para menores de 18 anos.",
+    "price": 10,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Heineken long neck"
+      ],
+      "tags": [
+        "Cerveja",
+        "+18"
+      ]
+    }
+  },
+  {
+    "id": "stella",
+    "name": "Stella Artois",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Cerveja Stella Artois. Venda proibida para menores de 18 anos.",
+    "price": 12,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Stella Artois"
+      ],
+      "tags": [
+        "Cerveja",
+        "+18"
+      ]
+    }
+  },
+  {
+    "id": "corona",
+    "name": "Corona",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Cerveja Corona. Venda proibida para menores de 18 anos.",
+    "price": 12,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Corona"
+      ],
+      "tags": [
+        "Cerveja",
+        "+18"
+      ]
+    }
+  },
+  {
+    "id": "spaten",
+    "name": "Spaten",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Cerveja Spaten. Venda proibida para menores de 18 anos.",
+    "price": 10,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Spaten"
+      ],
+      "tags": [
+        "Cerveja",
+        "+18"
+      ]
+    }
+  },
+  {
+    "id": "energetico",
+    "name": "Energético",
+    "category": "bebida",
+    "image": "assets/drinks-ai.jpg",
+    "description": "Energético gelado.",
+    "price": 14,
+    "details": {
+      "badge": "Bebida",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Energético"
+      ],
+      "tags": [
+        "Energético"
+      ]
+    }
+  },
+  {
+    "id": "delicia-abacaxi",
+    "name": "Delícia de Abacaxi",
+    "category": "doce",
+    "image": null,
+    "description": "Sobremesa delícia de abacaxi.",
+    "price": 10,
+    "details": {
+      "badge": "Sobremesa",
+      "prepTime": "5-10 min",
+      "serves": "1 pessoa",
+      "ingredients": [
+        "Delícia de abacaxi"
+      ],
+      "tags": [
         "Sobremesa"
       ]
     }
   },
   {
-    "id": "cha-gelado",
-    "name": "Chá Gelado da Casa",
-    "category": "drink",
-    "image": "assets/drinks-ai.jpg",
-    "description": "Bebida gelada, refrescante e levemente cítrica.",
-    "oldPrice": null,
-    "price": 9.9,
-    "rating": 4.5,
+    "id": "pudim",
+    "name": "Pudim",
+    "category": "doce",
+    "image": null,
+    "description": "Pudim da casa.",
+    "price": 8,
     "details": {
-      "badge": "Refrescante",
-      "prepTime": "5 min",
+      "badge": "Sobremesa",
+      "prepTime": "5-10 min",
       "serves": "1 pessoa",
       "ingredients": [
-        "Chá gelado",
-        "Limão",
-        "Gelo"
+        "Pudim"
       ],
       "tags": [
-        "Bebida",
-        "Leve"
-      ]
-    }
-  },
-  {
-    "id": "promo-casal",
-    "name": "Promo Casal",
-    "category": "promo",
-    "image": "assets/combo-ai.jpg",
-    "description": "Dois burgers, duas bebidas e uma batata crispy para compartilhar.",
-    "oldPrice": 89.9,
-    "price": 74.9,
-    "rating": 4.9,
-    "details": {
-      "badge": "Melhor oferta",
-      "prepTime": "30-40 min",
-      "serves": "2 pessoas",
-      "ingredients": [
-        "2 burgers",
-        "2 bebidas",
-        "Batata crispy",
-        "Molhos da casa"
-      ],
-      "tags": [
-        "Promo",
-        "Compartilhar"
+        "Sobremesa"
       ]
     }
   }

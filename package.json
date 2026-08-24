@@ -1,8 +1,8 @@
 {
-  "name": "mordida-perfeita-cardapio",
+  "name": "villa-burger-cardapio",
   "version": "1.0.0",
   "private": true,
-  "description": "Cardapio digital responsivo para hamburgueria delivery, em HTML, CSS e JavaScript puro.",
+  "description": "Cardapio digital da Villa Burger em HTML, CSS e JavaScript puro, com pedido finalizado no WhatsApp.",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",

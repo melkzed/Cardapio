@@ -1,4 +1,9 @@
-import { DELIVERY_FEE, RESTAURANT_WHATSAPP } from "./config.js";
+import {
+  DELIVERY_FEE_LABEL,
+  DELIVERY_FEE_NOTE,
+  RESTAURANT_NAME,
+  RESTAURANT_WHATSAPP,
+} from "./config.js";
 import {
   cartBody,
   cartDeliveryFee,
@@ -21,9 +26,14 @@ import {
 } from "./dom.js";
 import { addonMarkersHtml, addonsSummary } from "./addons.js";
 import { persistCart, persistCheckout } from "./storage.js";
+import { productImageHtml } from "./media.js";
 import { state } from "./state.js";
 import { restoreFocus, setBackgroundInert, setCartExpanded } from "./ui.js";
 import { escapeHtml, focusFirstElement, formatPrice, normalizeText } from "./utils.js";
+
+export function isDelivery() {
+  return state.checkout.fulfillment === "delivery";
+}
 
 export function cartKey(product, pickedAddons, note) {
   return [
@@ -69,16 +79,10 @@ function cartSubtotalValue() {
   return state.cart.reduce((total, item) => total + cartItemPrice(item), 0);
 }
 
-function deliveryFeeValue() {
-  if (!state.cart.length || state.checkout.fulfillment === "pickup") {
-    return 0;
-  }
-
-  return DELIVERY_FEE;
-}
-
+// A entrega e combinada no atendimento e muda conforme a localizacao, entao
+// nenhum valor de taxa entra no total exibido ou enviado.
 function cartTotalValue() {
-  return cartSubtotalValue() + deliveryFeeValue();
+  return cartSubtotalValue();
 }
 
 function cartQuantity() {
@@ -93,8 +97,39 @@ function updateCartBadges() {
   });
 }
 
+// O corpo do carrinho e redesenhado inteiro a cada mudanca, o que descartaria o
+// botao que o cliente acabou de acionar. Guardamos qual controle estava em foco
+// para devolve-lo depois, senao quem usa teclado ou leitor de tela e jogado
+// para o topo da pagina a cada "+".
+function activeCartControl() {
+  const active = document.activeElement;
+  if (!active || !cartBody.contains(active)) {
+    return null;
+  }
+
+  const attribute = ["data-cart-plus", "data-cart-minus", "data-remove-item"].find((name) =>
+    active.hasAttribute(name)
+  );
+  return attribute ? { attribute, value: active.getAttribute(attribute) } : null;
+}
+
+function restoreCartControl(control) {
+  if (!control) {
+    return;
+  }
+
+  const selector = `[${control.attribute}="${CSS.escape(control.value)}"]`;
+  const target = cartBody.querySelector(selector);
+  if (target) {
+    target.focus();
+  } else {
+    clearCartButton.focus();
+  }
+}
+
 export function renderCart() {
   updateCartBadges();
+  const focusedControl = activeCartControl();
 
   if (!state.cart.length) {
     cartBody.innerHTML = `
@@ -112,7 +147,7 @@ export function renderCart() {
         (item) => `
           <article class="cart-item">
             <div class="cart-item-media">
-              <img src="${escapeHtml(item.product.image)}" alt="${escapeHtml(item.product.name)}">
+              ${productImageHtml(item.product)}
               <span>${item.quantity}x</span>
             </div>
             <div class="cart-item-content">
@@ -139,11 +174,12 @@ export function renderCart() {
       .join("");
   }
 
+  restoreCartControl(focusedControl);
+
   clearCartButton.disabled = !state.cart.length;
   checkoutButton.disabled = !state.cart.length;
   cartSubtotal.textContent = formatPrice(cartSubtotalValue());
-  cartDeliveryFee.textContent =
-    state.checkout.fulfillment === "pickup" ? "Retirada grátis" : formatPrice(deliveryFeeValue());
+  cartDeliveryFee.textContent = isDelivery() ? DELIVERY_FEE_LABEL : "Retirar no local";
   cartTotal.textContent = formatPrice(cartTotalValue());
   updateWhatsappLinks();
 }
@@ -164,7 +200,7 @@ export function applyCheckoutFields() {
 export function updateCheckoutFromFields() {
   const selectedFulfillment = [...fulfillmentRadios].find((radio) => radio.checked);
   state.checkout = {
-    fulfillment: selectedFulfillment?.value || "delivery",
+    fulfillment: selectedFulfillment?.value === "delivery" ? "delivery" : "local",
     name: customerName.value.trim(),
     phone: customerPhone.value.trim(),
     address: customerAddress.value.trim(),
@@ -177,18 +213,23 @@ export function updateCheckoutFromFields() {
   renderCart();
 }
 
+// No local o cliente so precisa do nome (para chamar o pedido) e do WhatsApp
+// (para avisar quando ficar pronto). Endereco so aparece na entrega.
 function updateCheckoutVisibility() {
-  const isDelivery = state.checkout.fulfillment === "delivery";
+  const delivery = isDelivery();
   deliveryFields.forEach((field) => {
-    field.hidden = !isDelivery;
+    field.hidden = !delivery;
     field.querySelectorAll("input").forEach((input) => {
-      input.setAttribute("aria-required", String(isDelivery));
+      input.setAttribute("aria-required", String(delivery && input.dataset.optionalField !== ""));
     });
   });
-  changeField.hidden = state.checkout.payment !== "Dinheiro";
-  changeField.querySelectorAll("input").forEach((input) => {
-    input.setAttribute("aria-hidden", String(state.checkout.payment !== "Dinheiro"));
+
+  document.querySelectorAll("[data-delivery-note]").forEach((element) => {
+    element.hidden = !delivery;
   });
+
+  const needsChange = state.checkout.payment === "Dinheiro";
+  changeField.hidden = !needsChange;
 }
 
 function setCartMessage(message, type = "") {
@@ -203,18 +244,18 @@ export function validateCheckout() {
   }
 
   if (!state.checkout.name) {
-    setCartMessage("Informe seu nome para finalizar o pedido.", "error");
+    setCartMessage("Informe seu nome para identificar o pedido.", "error");
     customerName.focus();
     return false;
   }
 
   if (!state.checkout.phone) {
-    setCartMessage("Informe seu WhatsApp para contato.", "error");
+    setCartMessage("Informe seu WhatsApp para avisarmos quando o pedido ficar pronto.", "error");
     customerPhone.focus();
     return false;
   }
 
-  if (state.checkout.fulfillment === "delivery" && !state.checkout.address) {
+  if (isDelivery() && !state.checkout.address) {
     setCartMessage("Informe o endereço de entrega.", "error");
     customerAddress.focus();
     return false;
@@ -282,19 +323,20 @@ export function clearCart() {
 
 function whatsappMessage() {
   if (!state.cart.length) {
-    return "Olá! Quero fazer um pedido na Mordida Perfeita.";
+    return `Olá! Quero fazer um pedido na ${RESTAURANT_NAME}.`;
   }
 
   const checkout = state.checkout;
+  const delivery = isDelivery();
   const lines = [
-    "Olá! Quero finalizar meu pedido na Mordida Perfeita:",
+    `Olá! Quero finalizar meu pedido na ${RESTAURANT_NAME}:`,
     "",
     `Cliente: ${checkout.name || "Não informado"}`,
     `WhatsApp: ${checkout.phone || "Não informado"}`,
-    `Tipo: ${checkout.fulfillment === "delivery" ? "Entrega" : "Retirada"}`,
+    `Tipo: ${delivery ? "Entrega" : "Consumo no local"}`,
   ];
 
-  if (checkout.fulfillment === "delivery") {
+  if (delivery) {
     lines.push(`Endereço: ${checkout.address || "Não informado"}`);
     if (checkout.reference) {
       lines.push(`Referência: ${checkout.reference}`);
@@ -308,29 +350,30 @@ function whatsappMessage() {
 
   lines.push("", "Itens:");
   state.cart.forEach((item) => {
-    const addonsText = (item.addons || []).length
-      ? ` | ${addonsSummary(item.addons)}`
-      : "";
+    const addonsText = (item.addons || []).length ? ` | ${addonsSummary(item.addons)}` : "";
     const noteText = item.note ? ` | Obs: ${item.note}` : "";
     lines.push(
       `${item.quantity}x ${item.product.name}${addonsText}${noteText} - ${formatPrice(cartItemPrice(item))}`
     );
   });
 
-  lines.push(
-    "",
-    `Subtotal: ${formatPrice(cartSubtotalValue())}`,
-    `Taxa de entrega: ${
-      state.checkout.fulfillment === "pickup" ? "Retirada grátis" : formatPrice(deliveryFeeValue())
-    }`,
-    `Total: ${formatPrice(cartTotalValue())}`
-  );
+  lines.push("", `Total dos itens: ${formatPrice(cartTotalValue())}`);
+
+  if (delivery) {
+    lines.push(`Taxa de entrega: ${DELIVERY_FEE_LABEL} (${DELIVERY_FEE_NOTE})`);
+  } else {
+    lines.push("Vou retirar/consumir no local. Me avisem por aqui quando ficar pronto.");
+  }
 
   return lines.join("\n");
 }
 
+function whatsappUrl() {
+  return `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(whatsappMessage())}`;
+}
+
 function updateWhatsappLinks() {
-  const url = `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(whatsappMessage())}`;
+  const url = whatsappUrl();
   whatsappLinks.forEach((link) => {
     link.href = url;
   });
@@ -343,9 +386,10 @@ export function finalizeCheckout() {
     return;
   }
 
-  window.open(
-    `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(whatsappMessage())}`,
-    "_blank",
-    "noreferrer"
-  );
+  // Se o bloqueador de popup barrar a nova aba, navegamos na mesma janela para
+  // o cliente nao ficar achando que o botao nao fez nada.
+  const opened = window.open(whatsappUrl(), "_blank", "noopener,noreferrer");
+  if (!opened) {
+    window.location.href = whatsappUrl();
+  }
 }

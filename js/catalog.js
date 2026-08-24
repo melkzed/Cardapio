@@ -2,7 +2,7 @@ import { addonsGrid, productGrid } from "./dom.js";
 import { normalizeAddon, normalizeCartAddons } from "./addons.js";
 import { normalizeProduct, renderProducts } from "./products.js";
 import { persistCart } from "./storage.js";
-import { renderAddons } from "./builder.js";
+import { renderAddonsSection } from "./addons-section.js";
 import { renderCart } from "./cart.js";
 import { state } from "./state.js";
 import { updateMenuStructuredData } from "./seo.js";
@@ -30,7 +30,7 @@ export async function loadCatalog() {
     state.addons = loadedAddons.map(normalizeAddon);
     reconcileStoredCart();
     renderProducts();
-    renderAddons();
+    renderAddonsSection();
     renderCart();
     updateMenuStructuredData();
     productGrid.setAttribute("aria-busy", "false");
@@ -38,8 +38,8 @@ export async function loadCatalog() {
     console.error(error);
     productGrid.innerHTML = `
       <p class="menu-status error">
-        Não foi possível carregar o cardápio. Rode <strong>python -m http.server 5173</strong>
-        ou publique a pasta <strong>data/</strong> junto com o site.
+        Não foi possível carregar o cardápio. Recarregue a página ou fale com a gente
+        pelo WhatsApp para fazer o pedido.
       </p>
     `;
     addonsGrid.innerHTML = "";
@@ -52,7 +52,9 @@ function reconcileStoredCart() {
     .map((item) => {
       const liveProduct = state.products.find((product) => product.id === item.product?.id);
       if (!liveProduct) {
-        return item;
+        // Produto saiu do cardapio: descartamos em vez de manter no carrinho
+        // com nome e preco antigos, que iriam parar no pedido do WhatsApp.
+        return null;
       }
 
       return {
@@ -61,6 +63,6 @@ function reconcileStoredCart() {
         addons: normalizeCartAddons(item.addons),
       };
     })
-    .filter((item) => item.product && item.quantity > 0);
+    .filter((item) => item && item.quantity > 0);
   persistCart(state.cart);
 }

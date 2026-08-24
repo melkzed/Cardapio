@@ -1,10 +1,6 @@
 import { cartDrawer, modal, searchInput } from "./dom.js";
 import {
-  addBuilderToCart,
-  toggleBuilderPanel,
-  updateBuilderQuantity,
-} from "./builder.js";
-import {
+  applyCheckoutFields,
   clearCart,
   closeCart,
   finalizeCheckout,
@@ -24,6 +20,7 @@ import {
 import { closeMobileMenu, toggleMobileMenu } from "./ui.js";
 import { renderProducts, setCategory } from "./products.js";
 import { state } from "./state.js";
+import { toggleTheme } from "./theme.js";
 import { trapFocus } from "./utils.js";
 
 export function bindEvents() {
@@ -53,25 +50,17 @@ function handleDocumentClick(event) {
     return;
   }
 
-  if (event.target.closest("[data-builder-toggle]")) {
-    toggleBuilderPanel();
+  if (event.target.closest("[data-theme-toggle]")) {
+    toggleTheme();
     return;
   }
 
-  const builderMinusButton = event.target.closest("[data-builder-minus]");
-  if (builderMinusButton) {
-    updateBuilderQuantity(builderMinusButton.dataset.builderMinus, -1);
-    return;
-  }
-
-  const builderPlusButton = event.target.closest("[data-builder-plus]");
-  if (builderPlusButton) {
-    updateBuilderQuantity(builderPlusButton.dataset.builderPlus, 1);
-    return;
-  }
-
-  if (event.target.closest("[data-builder-add]")) {
-    addBuilderToCart();
+  // Atalho do topo: ja deixa o pedido marcado como entrega e abre o carrinho.
+  if (event.target.closest("[data-order-delivery]")) {
+    state.checkout = { ...state.checkout, fulfillment: "delivery" };
+    applyCheckoutFields();
+    updateCheckoutFromFields();
+    openCart();
     return;
   }
 
@@ -102,7 +91,7 @@ function handleDocumentClick(event) {
     return;
   }
 
-  if (event.target.closest(".add-cart-button")) {
+  if (event.target.closest("[data-modal-add]")) {
     addModalToCart();
     return;
   }

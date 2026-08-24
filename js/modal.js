@@ -5,17 +5,17 @@ import {
   modalAddons,
   modalDescription,
   modalDetails,
-  modalImage,
+  modalMedia,
   modalOldPrice,
   modalPrice,
   modalQuantity,
-  modalRating,
   modalTags,
   modalTitle,
   modalTotal,
 } from "./dom.js";
 import { addItemToCart, openCart } from "./cart.js";
 import { availableAddonsForProduct } from "./addons.js";
+import { productImageHtml } from "./media.js";
 import { state } from "./state.js";
 import { restoreFocus, setBackgroundInert, showToast } from "./ui.js";
 import { escapeHtml, focusFirstElement, formatPrice } from "./utils.js";
@@ -30,7 +30,7 @@ export function renderModalAddons(product = state.modalProduct) {
     .filter((groupData) => groupData.items.length);
 
   if (!groupedAddons.length) {
-    modalAddons.innerHTML = '<p class="menu-status">Nenhum opcional disponível para esta categoria.</p>';
+    modalAddons.innerHTML = '<p class="menu-status">Este item não tem adicionais.</p>';
     return;
   }
 
@@ -170,13 +170,11 @@ export function openProduct(productId) {
   state.lastFocusedElement = document.activeElement;
   state.modalProduct = product;
   state.modalQuantity = 1;
-  modalImage.src = product.image;
-  modalImage.alt = product.name;
+  modalMedia.innerHTML = productImageHtml(product, { lazy: false });
   modalTitle.textContent = product.name;
   modalDescription.textContent = product.description;
   modalOldPrice.textContent = product.oldPrice ? formatPrice(product.oldPrice) : "";
   modalPrice.textContent = formatPrice(product.price);
-  modalRating.textContent = `⭐ ${product.rating.toFixed(1)}`;
   itemNote.value = "";
   renderModalDetails(product);
   renderModalAddons(product);

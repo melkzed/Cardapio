@@ -7,11 +7,15 @@ export const SITE_URL = "https://melkzed.github.io/Cardapio/";
 export const RESTAURANT_INSTAGRAM = "https://www.instagram.com/villaburguer.pe/";
 export const RESTAURANT_INSTAGRAM_HANDLE = "@villaburguer.pe";
 
-// Horario de funcionamento: preencha com os dias/horarios reais da loja para
-// que apareçam no site e nos dados estruturados. Enquanto estiver vazio, o site
+// Horario de funcionamento: preenchido com os dias/horarios reais da loja para
+// aparecer no site e nos dados estruturados. Enquanto estiver vazio, o site
 // direciona o cliente para o Instagram em vez de exibir um horario inventado.
-// Exemplo: [{ days: "Terça a Domingo", hours: "18:00 às 23:00" }]
-export const OPENING_HOURS = [];
+export const OPENING_HOURS = [
+  { days: "Segunda a Quarta", hours: "17:30 às 23:00" },
+  { days: "Quinta a Domingo", hours: "17:00 às 23:30" },
+];
+
+export const RESTAURANT_UNIT = "Jardim São Paulo";
 
 // A entrega e combinada no atendimento: o valor muda conforme a localizacao,
 // entao o pedido nao soma taxa nenhuma ao total.

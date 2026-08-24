@@ -78,6 +78,20 @@
         "priceRange": "$$",
         "telephone": "+55 81 98963-7167",
         "acceptsReservations": false,
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday"],
+            "opens": "17:30",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "17:00",
+            "closes": "23:30"
+          }
+        ],
         "hasMenu": {
           "@type": "Menu",
           "name": "Cardápio Villa Burger",
@@ -223,10 +237,7 @@
           <article class="feature-card">
             <span aria-hidden="true">🕘</span>
             <h3>Horário de funcionamento</h3>
-            <p>
-              Confira os dias e horários atualizados no nosso Instagram
-              <a href="https://www.instagram.com/villaburguer.pe/" target="_blank" rel="noreferrer">@villaburguer.pe</a>.
-            </p>
+            <div data-opening-hours></div>
           </article>
         </div>
       </section>

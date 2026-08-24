@@ -197,7 +197,7 @@ function listen(port, attemptsLeft = 10) {
 
   server.listen(port, host, () => {
     console.log("");
-    console.log("  Mordida Perfeita - servidor de desenvolvimento");
+    console.log("  Villa Burger - servidor de desenvolvimento");
     console.log(`  http://${host}:${port}`);
     console.log("  live reload ativo - Ctrl+C para parar");
     console.log("");

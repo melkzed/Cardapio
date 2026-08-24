@@ -1,170 +1,298 @@
 [
   {
-    "id": "bacon",
+    "id": "add-carne-frango",
+    "icon": "🍗",
+    "name": "Carne de frango",
+    "price": 7,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
+  },
+  {
+    "id": "add-carne-suina",
     "icon": "🥓",
-    "name": "Bacon Extra",
-    "price": 5.0,
-    "group": "extra",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "name": "Carne suína",
+    "price": 7,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "cheddar",
-    "icon": "🧀",
-    "name": "Queijo Cheddar",
-    "price": 4.0,
-    "group": "extra",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "id": "add-carne-bovina",
+    "icon": "🥩",
+    "name": "Carne bovina",
+    "price": 7,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "ovo",
+    "id": "add-picanha",
+    "icon": "🥩",
+    "name": "Picanha",
+    "price": 10,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
+  },
+  {
+    "id": "add-carneiro",
+    "icon": "🍖",
+    "name": "Carneiro",
+    "price": 10,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
+  },
+  {
+    "id": "add-coracao",
+    "icon": "🍗",
+    "name": "Coração de galinha",
+    "price": 8,
+    "group": "protein",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
+  },
+  {
+    "id": "add-ovo",
     "icon": "🥚",
     "name": "Ovo",
-    "price": 3.0,
+    "price": 3,
     "group": "extra",
-    "categories": ["burger", "combo", "promo"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "cebola",
-    "icon": "🧅",
-    "name": "Cebola Caramelizada",
-    "price": 4.0,
+    "id": "add-bacon",
+    "icon": "🥓",
+    "name": "Bacon",
+    "price": 3,
     "group": "extra",
-    "categories": ["burger", "combo", "promo"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "molho",
-    "icon": "🥫",
-    "name": "Molho Especial",
-    "price": 3.0,
-    "group": "extra",
-    "categories": ["burger", "combo", "promo", "portion"]
-  },
-  {
-    "id": "hamburguer",
-    "icon": "🥩",
-    "name": "Hamburguer Extra",
-    "price": 10.0,
-    "group": "extra",
-    "categories": ["burger", "combo", "promo"]
-  },
-  {
-    "id": "catupiry",
+    "id": "add-queijo",
     "icon": "🧀",
-    "name": "Catupiry",
-    "price": 5.0,
+    "name": "Queijo",
+    "price": 3,
     "group": "extra",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "jalapeno",
-    "icon": "🌶️",
-    "name": "Jalapeno",
-    "price": 3.0,
+    "id": "add-coalho",
+    "icon": "🧀",
+    "name": "Queijo coalho",
+    "price": 5,
     "group": "extra",
-    "categories": ["burger", "combo", "promo"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "barbecue",
-    "icon": "🔥",
-    "name": "Barbecue Defumado",
-    "price": 4.0,
+    "id": "add-calabresa",
+    "icon": "🌭",
+    "name": "Calabresa",
+    "price": 5,
     "group": "extra",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "picles",
-    "icon": "🥒",
-    "name": "Picles Extra",
-    "price": 2.5,
+    "id": "add-cheddar",
+    "icon": "🧀",
+    "name": "Cheddar",
+    "price": 7,
     "group": "extra",
-    "categories": ["burger", "combo", "promo"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "gelo",
-    "icon": "🧊",
-    "name": "Gelo Extra",
-    "price": 0.0,
+    "id": "add-queijo-reino",
+    "icon": "🧀",
+    "name": "Queijo do reino",
+    "price": 7,
     "group": "extra",
-    "categories": ["drink"]
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "limao",
-    "icon": "🍋",
-    "name": "Limão Extra",
-    "price": 1.5,
-    "group": "extra",
-    "categories": ["drink"]
-  },
-  {
-    "id": "onion-extra",
+    "id": "add-cebola-crispy",
     "icon": "🧅",
-    "name": "Onion Rings",
-    "price": 9.0,
-    "group": "side",
-    "categories": ["burger", "combo", "promo"]
+    "name": "Cebola crispy",
+    "price": 7,
+    "group": "extra",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "nuggets",
-    "icon": "🍗",
-    "name": "Nuggets Crocantes",
-    "price": 12.0,
-    "group": "side",
-    "categories": ["burger", "combo", "promo"]
+    "id": "add-cebola-caramelizada",
+    "icon": "🧅",
+    "name": "Cebola caramelizada",
+    "price": 7,
+    "group": "extra",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo"
+    ]
   },
   {
-    "id": "mini-salada",
-    "icon": "🥗",
-    "name": "Mini Salada",
-    "price": 7.0,
-    "group": "side",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "id": "molho-mostarda-mel",
+    "icon": "🍯",
+    "name": "Mostarda e mel",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "refri-lata",
-    "icon": "🥤",
-    "name": "Refrigerante Lata",
-    "price": 7.0,
-    "group": "drink",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "id": "molho-maionese-grill",
+    "icon": "🥫",
+    "name": "Maionese grill",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "cha-casa",
-    "icon": "🧋",
-    "name": "Chá Gelado da Casa",
-    "price": 9.9,
-    "group": "drink",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "id": "molho-ketchup",
+    "icon": "🍅",
+    "name": "Ketchup",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "agua",
-    "icon": "💧",
-    "name": "Água Mineral",
-    "price": 5.0,
-    "group": "drink",
-    "categories": ["burger", "combo", "promo", "portion"]
+    "id": "molho-barbecue",
+    "icon": "🔥",
+    "name": "Barbecue",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "batata-p",
-    "icon": "🍟",
-    "name": "Batata P",
-    "price": 8.0,
-    "group": "fries",
-    "categories": ["burger", "combo", "promo"]
+    "id": "molho-geleia-pimenta",
+    "icon": "🌶️",
+    "name": "Geleia de pimenta",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "batata-m",
-    "icon": "🍟",
-    "name": "Batata M",
-    "price": 12.0,
-    "group": "fries",
-    "categories": ["burger", "combo", "promo"]
+    "id": "molho-geleia-pimenta-abacaxi",
+    "icon": "🍍",
+    "name": "Geleia de pimenta de abacaxi",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   },
   {
-    "id": "batata-g",
-    "icon": "🍟",
-    "name": "Batata G",
-    "price": 16.0,
-    "group": "fries",
-    "categories": ["burger", "combo", "promo"]
+    "id": "molho-baconese",
+    "icon": "🥓",
+    "name": "Baconese",
+    "price": 3,
+    "group": "sauce",
+    "categories": [
+      "gourmet",
+      "tradicional",
+      "hotdog",
+      "combo",
+      "porcao"
+    ]
   }
 ]

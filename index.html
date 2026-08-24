@@ -1,129 +1,141 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mordida Perfeita | Cardápio Delivery de Hambúrguer Artesanal em Recife</title>
+    <title>Villa Burger | Cardápio Digital e Pedido pelo WhatsApp</title>
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
     <link rel="canonical" href="https://melkzed.github.io/Cardapio/">
     <link rel="preload" as="image" href="assets/hero-burger-ai.jpg">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#070707">
-    <meta name="author" content="Mordida Perfeita">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="author" content="Villa Burger">
     <meta
       name="keywords"
-      content="hambúrguer artesanal Recife, cardápio delivery, Mordida Perfeita, Shopping Recife, batata frita, combos, pedir hambúrguer pelo WhatsApp"
+      content="Villa Burger, hambúrguer artesanal, cardápio digital, hambúrguer gourmet, hot dog, combos, pedir pelo WhatsApp, Pernambuco"
     >
     <meta
       name="description"
-      content="Cardápio delivery da Mordida Perfeita em Recife: hambúrgueres artesanais, combos, porções, bebidas, montagem personalizada e pedido direto pelo WhatsApp."
+      content="Cardápio digital da Villa Burger: hambúrgueres gourmet e tradicionais, hot dogs, combos, porções, coxinhas, bebidas e doces. Monte o pedido e finalize direto no WhatsApp."
     >
     <meta property="og:type" content="restaurant.menu">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Mordida Perfeita">
-    <meta property="og:title" content="Mordida Perfeita | Cardápio Delivery em Recife">
+    <meta property="og:site_name" content="Villa Burger">
+    <meta property="og:title" content="Villa Burger | Cardápio Digital">
     <meta
       property="og:description"
-      content="Hambúrgueres artesanais, combos, porções e montagem personalizada no Shopping Recife. Finalize seu pedido pelo WhatsApp."
+      content="Hambúrgueres gourmet, tradicionais, hot dogs, combos e porções. Peça no local ou por entrega e finalize no WhatsApp."
     >
     <meta property="og:url" content="https://melkzed.github.io/Cardapio/">
     <meta property="og:image" content="https://melkzed.github.io/Cardapio/assets/hero-burger-ai.jpg">
-    <meta property="og:image:alt" content="Hambúrguer artesanal da Mordida Perfeita com queijo, bacon e molho.">
+    <meta property="og:image:alt" content="Hambúrguer artesanal da Villa Burger com queijo, bacon e molho.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mordida Perfeita | Cardápio Delivery em Recife">
+    <meta name="twitter:title" content="Villa Burger | Cardápio Digital">
     <meta
       name="twitter:description"
-      content="Escolha seu hambúrguer artesanal, monte do seu jeito e finalize o pedido pelo WhatsApp."
+      content="Monte seu pedido no cardápio da Villa Burger e finalize direto no WhatsApp."
     >
     <meta name="twitter:image" content="https://melkzed.github.io/Cardapio/assets/hero-burger-ai.jpg">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/promos.css">
-    <link rel="stylesheet" href="css/builder.css">
+    <link rel="stylesheet" href="css/addons.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/accessibility.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script>
+      // Aplica o tema antes da primeira pintura para a pagina nao piscar branco
+      // (ou preto) enquanto os modulos carregam.
+      (() => {
+        try {
+          const stored = localStorage.getItem("villa-burger-theme-v1");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.dataset.theme = stored;
+            return;
+          }
+        } catch {
+          // Armazenamento bloqueado: seguimos com a preferencia do sistema.
+        }
+        document.documentElement.dataset.theme =
+          window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      })();
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "@id": "https://melkzed.github.io/Cardapio/#restaurant",
-        "name": "Mordida Perfeita",
+        "name": "Villa Burger",
         "url": "https://melkzed.github.io/Cardapio/",
         "image": "https://melkzed.github.io/Cardapio/assets/hero-burger-ai.jpg",
         "logo": "https://melkzed.github.io/Cardapio/assets/logo.svg",
-        "description": "Cardápio delivery de hambúrgueres artesanais, combos, porções e bebidas em Recife.",
-        "servesCuisine": ["Hambúrguer artesanal", "Delivery", "Porções"],
+        "description": "Cardápio digital de hambúrgueres gourmet e tradicionais, hot dogs, combos, porções, coxinhas, bebidas e doces.",
+        "servesCuisine": ["Hambúrguer artesanal", "Hot dog", "Porções"],
         "priceRange": "$$",
-        "telephone": "+55 81 99461-6516",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Shopping Recife",
-          "addressLocality": "Recife",
-          "addressRegion": "PE",
-          "addressCountry": "BR"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Recife"
-        },
+        "telephone": "+55 81 98963-7167",
+        "acceptsReservations": false,
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "18:00",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday"],
+            "opens": "17:30",
             "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "17:00",
+            "closes": "23:30"
           }
         ],
-        "acceptsReservations": false,
         "hasMenu": {
           "@type": "Menu",
-          "name": "Cardápio Mordida Perfeita",
+          "name": "Cardápio Villa Burger",
           "hasMenuSection": [
-            { "@type": "MenuSection", "name": "Hambúrgueres" },
+            { "@type": "MenuSection", "name": "Hambúrgueres gourmet" },
+            { "@type": "MenuSection", "name": "Lanches tradicionais" },
+            { "@type": "MenuSection", "name": "Hot dogs" },
             { "@type": "MenuSection", "name": "Combos" },
             { "@type": "MenuSection", "name": "Porções" },
+            { "@type": "MenuSection", "name": "Coxinhas" },
             { "@type": "MenuSection", "name": "Bebidas" },
-            { "@type": "MenuSection", "name": "Promoções" }
+            { "@type": "MenuSection", "name": "Doces" }
           ]
         },
-        "sameAs": [
-          "https://www.instagram.com/melkzedektech/",
-          "https://github.com/melkzed",
-          "https://www.linkedin.com/in/melk-zedek"
-        ]
+        "sameAs": ["https://www.instagram.com/villaburguer.pe/"]
       }
     </script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
     <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Mordida Perfeita">
-        <img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true">
-        <span>Mordida</span> Perfeita
+      <a class="brand" href="#inicio" aria-label="Villa Burger">
+        <img class="brand-logo" src="assets/logo.svg" alt="" width="96" height="96" aria-hidden="true">
+        <span class="brand-name"><strong>Villa</strong> Burger</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#cardapio">Cardápio</a>
-        <a href="#promocoes">Promoções</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#localizacao">Localização</a>
-        <a href="#avaliacoes">Avaliações</a>
+        <a href="#adicionais">Adicionais</a>
+        <a href="#atendimento">Atendimento</a>
       </nav>
 
       <div class="header-actions">
+        <button class="icon-button theme-button" type="button" data-theme-toggle aria-pressed="false" aria-label="Mudar para o tema claro">
+          <span aria-hidden="true" data-theme-icon>☾</span>
+          <span class="sr-only" data-theme-label>Tema escuro</span>
+        </button>
         <button class="icon-button cart-button" type="button" aria-label="Abrir carrinho" aria-controls="pedido" aria-expanded="false">
           <span aria-hidden="true">🛒</span>
           <strong class="cart-count" data-cart-count>0</strong>
         </button>
         <a class="header-cta" href="#cardapio">
           <span aria-hidden="true">🍔</span>
-          Pedir Agora
+          Ver Cardápio
         </a>
         <button class="icon-button menu-button" type="button" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
           <span aria-hidden="true">☰</span>
@@ -133,35 +145,31 @@
 
     <nav class="mobile-nav" id="menu-mobile" aria-label="Menu mobile">
       <a href="#cardapio">Cardápio</a>
-      <a href="#promocoes">Promoções</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#localizacao">Localização</a>
-      <a href="#avaliacoes">Avaliações</a>
+      <a href="#adicionais">Adicionais</a>
+      <a href="#atendimento">Atendimento</a>
     </nav>
 
     <main id="conteudo" tabindex="-1">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Inauguração 15 de maio</p>
-          <h1 id="hero-title">A <span>Mordida</span> Perfeita</h1>
-          <p>
-            Hambúrgueres artesanais com ingredientes premium. O melhor delivery
-            de Recife - PE chegou no Shopping Recife!
-          </p>
+          <img class="hero-logo" src="assets/logo.svg" alt="" width="200" height="200" aria-hidden="true">
+          <h1 id="hero-title"><span>Villa</span> Burger</h1>
           <div class="hero-actions">
             <a class="primary-action" href="#cardapio">
               <span aria-hidden="true">🍔</span>
-              Pedir Agora
+              Ver Cardápio
             </a>
-            <a class="secondary-action" href="#cardapio">Ver Cardápio</a>
+            <button class="secondary-action" type="button" data-order-delivery>
+              <span aria-hidden="true">🛵</span>
+              Pedir entrega
+            </button>
           </div>
-          <div class="hero-meta" aria-label="Informações rápidas">
-            <span>🕘 18h - 23h</span>
-            <span>⭐ Ingredientes Premium</span>
-          </div>
+          <p class="hero-hint">
+            Escolha os itens, monte o pedido e finalize direto no WhatsApp.
+          </p>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <img src="assets/hero-burger-ai.jpg" alt="" fetchpriority="high" decoding="async">
+          <img src="assets/hero-burger-ai.jpg" alt="" width="1200" height="1200" fetchpriority="high" decoding="async">
         </div>
       </section>
 
@@ -173,11 +181,14 @@
 
         <div class="category-tabs" role="tablist" aria-label="Categorias do cardápio">
           <button class="category-tab active" type="button" role="tab" aria-selected="true" aria-controls="product-grid" data-category="all">☰ Todos</button>
-          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="burger">🍔 Hambúrgueres</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="gourmet">🍔 Gourmet</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="tradicional">🍞 Tradicionais</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="hotdog">🌭 Hot Dogs</button>
           <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="combo">🥤 Combos</button>
-          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="portion">🍟 Porções</button>
-          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="drink">🥛 Bebidas</button>
-          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="promo">％ Promoções</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="porcao">🍟 Porções</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="coxinha">🍗 Coxinhas</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="bebida">🥤 Bebidas</button>
+          <button class="category-tab" type="button" role="tab" aria-selected="false" aria-controls="product-grid" tabindex="-1" data-category="doce">🍮 Doces</button>
         </div>
 
         <div class="menu-toolbar" aria-label="Busca e informações do cardápio">
@@ -193,127 +204,40 @@
           </div>
         </div>
 
-        <div class="product-grid" id="product-grid" data-product-grid role="tabpanel" aria-labelledby="menu-title" aria-live="polite" aria-busy="true"></div>
+        <div class="product-grid" id="product-grid" data-product-grid role="tabpanel" aria-labelledby="menu-title" aria-busy="true"></div>
       </section>
 
-      <section class="promo-band" id="promocoes" aria-labelledby="promo-title">
-        <div>
-          <p class="eyebrow">Inauguração</p>
-          <h2 id="promo-title">Promoção de abertura</h2>
-          <p>
-            Monte seu pedido com adicionais especiais e finalize direto no WhatsApp.
-          </p>
-        </div>
-        <a class="primary-action" href="#cardapio">
-          <span aria-hidden="true">🔥</span>
-          Ver Ofertas
-        </a>
-      </section>
-
-      <section class="addons-section" aria-labelledby="builder-title">
+      <section class="addons-section" id="adicionais" aria-labelledby="addons-title">
         <div class="section-heading compact">
           <p>Extras</p>
-          <h2 id="builder-title">Deixe do seu jeito</h2>
+          <h2 id="addons-title">Deixe do seu <span>jeito</span></h2>
+          <p class="section-note">
+            Escolha os adicionais dentro de cada item do cardápio, na hora de adicionar ao carrinho.
+          </p>
         </div>
         <div class="addons-grid" data-addons-grid></div>
       </section>
 
-      <section class="features-section" id="diferenciais" aria-labelledby="features-title">
+      <section class="features-section" id="atendimento" aria-labelledby="features-title">
         <div class="section-heading">
-          <p>Por que nos escolher</p>
-          <h2 id="features-title">Nossos <span>diferenciais</span></h2>
+          <p>Como pedir</p>
+          <h2 id="features-title">Atendimento e <span>horários</span></h2>
         </div>
         <div class="features-grid">
           <article class="feature-card">
-            <span aria-hidden="true">🥩</span>
-            <h3>Ingredientes premium</h3>
-            <p>Carnes selecionadas, pão brioche e molhos preparados na casa.</p>
+            <span aria-hidden="true">🏬</span>
+            <h3>No local</h3>
+            <p>Monte o pedido pelo cardápio e informe só nome e WhatsApp. Avisamos por lá quando ficar pronto.</p>
           </article>
           <article class="feature-card">
-            <span aria-hidden="true">⚡</span>
-            <h3>Entrega rápida</h3>
-            <p>Pedidos organizados para chegar quentinhos em Recife.</p>
+            <span aria-hidden="true">🛵</span>
+            <h3>Entrega</h3>
+            <p>Informe o endereço no pedido. A taxa de entrega é combinada no WhatsApp e varia conforme a localização.</p>
           </article>
           <article class="feature-card">
-            <span aria-hidden="true">🍔</span>
-            <h3>Hambúrguer artesanal</h3>
-            <p>Combinações caprichadas, porções generosas e sabor de verdade.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="location-section" id="localizacao" aria-labelledby="location-title">
-        <div class="map-panel" aria-label="Mapa do Shopping Recife">
-          <iframe
-            title="Google Maps - Shopping Recife"
-            src="https://www.google.com/maps?q=Shopping%20Recife%2C%20Recife%20-%20PE&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="location-info">
-          <h2 class="sr-only" id="location-title">Localização e contato</h2>
-          <div class="info-row">
-            <span aria-hidden="true">📍</span>
-            <div>
-              <h3>Endereço</h3>
-              <p>Shopping Recife</p>
-              <p>Recife - Pernambuco</p>
-            </div>
-          </div>
-          <div class="info-row">
             <span aria-hidden="true">🕘</span>
-            <div>
-              <h3>Horário de Funcionamento</h3>
-              <p>Terça a Domingo</p>
-              <p>18:00 às 23:00</p>
-            </div>
-          </div>
-          <div class="info-row">
-            <span aria-hidden="true">☎</span>
-            <div>
-              <h3>Contato</h3>
-              <p>WhatsApp: (81) 99461-6516</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonials-section" id="avaliacoes" aria-labelledby="testimonials-title">
-        <div class="section-heading compact">
-          <p>Avaliações</p>
-          <h2 id="testimonials-title">Quem pediu, <span>aprovou</span></h2>
-        </div>
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <div class="testimonial-head">
-              <div>
-                <strong>Mariana Alves</strong>
-                <span>Recife - PE</span>
-              </div>
-              <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
-            </div>
-            <p>O hambúrguer chegou quente, bem embalado e com bastante recheio. O bacon estava crocante do jeito certo.</p>
-          </article>
-          <article class="testimonial-card">
-            <div class="testimonial-head">
-              <div>
-                <strong>Rafael Nogueira</strong>
-                <span>Boa Viagem</span>
-              </div>
-              <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
-            </div>
-            <p>Montei meu lanche com cheddar, smash duplo e batata M. Ficou muito bom e o pedido veio certinho.</p>
-          </article>
-          <article class="testimonial-card">
-            <div class="testimonial-head">
-              <div>
-                <strong>Bianca Santos</strong>
-                <span>Pina</span>
-              </div>
-              <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
-            </div>
-            <p>Gostei muito da opção de personalizar. A bebida veio gelada e o molho da casa combinou demais com a batata.</p>
+            <h3>Horário de funcionamento</h3>
+            <div data-opening-hours></div>
           </article>
         </div>
       </section>
@@ -322,50 +246,44 @@
     <footer class="site-footer">
       <div>
         <a class="brand" href="#inicio">
-          <img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true">
-          <span>Mordida</span> Perfeita
+          <img class="brand-logo" src="assets/logo.svg" alt="" width="96" height="96" aria-hidden="true">
+          <span class="brand-name"><strong>Villa</strong> Burger</span>
         </a>
-        <p>Hambúrgueres artesanais no Shopping Recife, em Recife - PE.</p>
+        <p>Hambúrgueres gourmet, tradicionais, hot dogs, combos e porções.</p>
       </div>
       <div>
         <h3>Navegação</h3>
         <a href="#cardapio">Cardápio</a>
-        <a href="#promocoes">Promoções</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#localizacao">Localização</a>
+        <a href="#adicionais">Adicionais</a>
+        <a href="#atendimento">Atendimento</a>
       </div>
       <div>
-        <h3>Horário</h3>
-        <p>Terça a Domingo</p>
-        <p>18:00 - 23:00</p>
-        <strong>Segunda: Fechado</strong>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5581989637167" target="_blank" rel="noreferrer">WhatsApp (81) 98963-7167</a>
+        <a href="https://www.instagram.com/villaburguer.pe/" target="_blank" rel="noreferrer">Instagram @villaburguer.pe</a>
       </div>
       <div>
-        <h3>Redes sociais do desenvolvedor</h3>
+        <h3>Redes sociais</h3>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/melk-zedek" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.94 8.9v10.3H3.56V8.9h3.38ZM7.15 5.72c0 1.02-.78 1.84-1.97 1.84h-.02c-1.15 0-1.9-.82-1.9-1.84 0-1.04.77-1.84 1.95-1.84s1.92.8 1.94 1.84ZM20.74 13.3v5.9h-3.38v-5.5c0-1.38-.5-2.32-1.73-2.32-.94 0-1.5.63-1.75 1.24-.09.22-.11.52-.11.83v5.75h-3.38s.04-9.33 0-10.3h3.38v1.46c.45-.69 1.25-1.68 3.04-1.68 2.22 0 3.93 1.45 3.93 4.62Z"/>
-            </svg>
-          </a>
-          <a href="https://github.com/melkzed" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.7a9.55 9.55 0 0 0-3.02 18.62c.48.09.66-.2.66-.46v-1.8c-2.7.58-3.27-1.15-3.27-1.15-.44-1.12-1.08-1.42-1.08-1.42-.88-.6.07-.59.07-.59.98.07 1.5 1 1.5 1 .86 1.48 2.26 1.05 2.82.8.08-.62.34-1.05.62-1.29-2.16-.24-4.43-1.08-4.43-4.79 0-1.06.38-1.93 1-2.61-.1-.25-.43-1.24.1-2.58 0 0 .82-.26 2.67 1a9.2 9.2 0 0 1 4.86 0c1.86-1.26 2.67-1 2.67-1 .53 1.34.2 2.33.1 2.58.63.68 1 1.55 1 2.61 0 3.72-2.28 4.54-4.45 4.78.35.3.66.9.66 1.81v2.68c0 .26.17.56.67.46A9.55 9.55 0 0 0 12 2.7Z"/>
-            </svg>
-          </a>
-          <a href="https://wa.me/5581994616516" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12.05 3.2a8.62 8.62 0 0 0-7.35 13.1l-.88 3.22 3.3-.86a8.6 8.6 0 0 0 4.93 1.54h.01a8.5 8.5 0 0 0 6.1-2.53 8.6 8.6 0 0 0-6.11-14.47Zm5.07 12.45a7.15 7.15 0 0 1-5.06 2.1h-.01a7.1 7.1 0 0 1-3.62-.99l-.26-.15-1.96.52.52-1.91-.17-.27a7.13 7.13 0 1 1 10.56.7Zm-1.1-2.03c-.2-.1-1.18-.58-1.37-.65-.18-.07-.32-.1-.45.1-.13.19-.52.65-.64.78-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.59-.53-.99-1.18-1.1-1.38-.12-.2-.02-.31.09-.41.09-.09.2-.23.3-.34.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.35h-.38c-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .48.21.86.33 1.15.42.48.15.92.13 1.27.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.87.12-.95-.05-.08-.18-.13-.38-.23Z"/>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/melkzedektech/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/villaburguer.pe/" target="_blank" rel="noreferrer" aria-label="Instagram da Villa Burger">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M7.7 3.5h8.6a4.2 4.2 0 0 1 4.2 4.2v8.6a4.2 4.2 0 0 1-4.2 4.2H7.7a4.2 4.2 0 0 1-4.2-4.2V7.7a4.2 4.2 0 0 1 4.2-4.2Zm8.46 1.55H7.84a2.79 2.79 0 0 0-2.79 2.79v8.32a2.79 2.79 0 0 0 2.79 2.79h8.32a2.79 2.79 0 0 0 2.79-2.79V7.84a2.79 2.79 0 0 0-2.79-2.79ZM12 7.65A4.35 4.35 0 1 1 12 16.35 4.35 4.35 0 0 1 12 7.65Zm0 1.55a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm4.53-1.95a1.02 1.02 0 1 1 0 2.04 1.02 1.02 0 0 1 0-2.04Z"/>
             </svg>
           </a>
+          <a href="https://wa.me/5581989637167" target="_blank" rel="noreferrer" aria-label="WhatsApp da Villa Burger">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.05 3.2a8.62 8.62 0 0 0-7.35 13.1l-.88 3.22 3.3-.86a8.6 8.6 0 0 0 4.93 1.54h.01a8.5 8.5 0 0 0 6.1-2.53 8.6 8.6 0 0 0-6.11-14.47Zm5.07 12.45a7.15 7.15 0 0 1-5.06 2.1h-.01a7.1 7.1 0 0 1-3.62-.99l-.26-.15-1.96.52.52-1.91-.17-.27a7.13 7.13 0 1 1 10.56.7Zm-1.1-2.03c-.2-.1-1.18-.58-1.37-.65-.18-.07-.32-.1-.45.1-.13.19-.52.65-.64.78-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.59-.53-.99-1.18-1.1-1.38-.12-.2-.02-.31.09-.41.09-.09.2-.23.3-.34.1-.12.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.35h-.38c-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .48.21.86.33 1.15.42.48.15.92.13 1.27.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.87.12-.95-.05-.08-.18-.13-.38-.23Z"/>
+            </svg>
+          </a>
         </div>
+        <p class="dev-credit">
+          Site desenvolvido por
+          <a href="https://github.com/melkzed" target="_blank" rel="noreferrer">Melk Zedek</a>
+          ·
+          <a href="https://www.linkedin.com/in/melk-zedek" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
       </div>
-      <p class="copyright">© 2026 Mordida Perfeita Delivery. Todos os direitos reservados.</p>
+      <p class="copyright">© 2026 Villa Burger. Todos os direitos reservados.</p>
     </footer>
 
     <a class="floating-whatsapp" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
@@ -388,14 +306,14 @@
         <form class="checkout-form" data-checkout-form>
           <div class="delivery-toggle" role="radiogroup" aria-label="Forma de recebimento">
             <label>
-              <input type="radio" name="fulfillment" value="delivery" data-fulfillment checked>
-              <span aria-hidden="true">🛵</span>
-              Entrega
+              <input type="radio" name="fulfillment" value="local" data-fulfillment checked>
+              <span aria-hidden="true">🏬</span>
+              No local
             </label>
             <label>
-              <input type="radio" name="fulfillment" value="pickup" data-fulfillment>
-              <span aria-hidden="true">🏬</span>
-              Retirada
+              <input type="radio" name="fulfillment" value="delivery" data-fulfillment>
+              <span aria-hidden="true">🛵</span>
+              Entrega
             </label>
           </div>
 
@@ -406,18 +324,23 @@
 
           <label>
             WhatsApp
-            <input data-customer-phone inputmode="tel" autocomplete="tel" placeholder="(81) 99999-9999" aria-required="true">
+            <input data-customer-phone inputmode="tel" autocomplete="tel" placeholder="(81) 99999-9999" aria-required="true" aria-describedby="phone-help">
           </label>
+          <p class="field-hint" id="phone-help">Usamos seu WhatsApp para avisar quando o pedido ficar pronto.</p>
 
-          <label class="delivery-field">
+          <label class="delivery-field" hidden>
             Endereço
             <input data-customer-address autocomplete="street-address" placeholder="Rua, número e bairro" aria-required="true">
           </label>
 
-          <label class="delivery-field">
+          <label class="delivery-field" hidden>
             Referência
-            <input data-customer-reference placeholder="Casa, portão, ponto de referência">
+            <input data-customer-reference data-optional-field placeholder="Casa, portão, ponto de referência">
           </label>
+
+          <p class="field-hint" data-delivery-note hidden>
+            A taxa de entrega é combinada no WhatsApp e varia conforme a localização.
+          </p>
 
           <div class="checkout-row">
             <label>
@@ -442,12 +365,12 @@
           <strong>Resumo</strong>
         </div>
         <div class="summary-row">
-          <span><span aria-hidden="true">🍔</span> Subtotal</span>
+          <span><span aria-hidden="true">🍔</span> Itens</span>
           <strong data-cart-subtotal aria-live="polite">R$ 0,00</strong>
         </div>
         <div class="summary-row">
           <span><span aria-hidden="true">🛵</span> Taxa de entrega</span>
-          <strong data-delivery-fee aria-live="polite">R$ 0,00</strong>
+          <strong data-delivery-fee aria-live="polite">Retirar no local</strong>
         </div>
         <div class="total">
           <span>Total</span>
@@ -455,7 +378,7 @@
         </div>
         <button class="checkout-button" type="button">
           <span aria-hidden="true">💬</span>
-          Finalizar no WhatsApp
+          Confirmar pedido no WhatsApp
           <span aria-hidden="true">›</span>
         </button>
       </footer>
@@ -465,10 +388,7 @@
       <article class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
         <button class="icon-button close-modal" type="button" aria-label="Fechar produto">×</button>
         <div class="modal-scroll">
-          <div class="modal-image-wrap">
-            <img data-modal-image src="" alt="">
-            <span class="rating-pill">⭐ 4.7</span>
-          </div>
+          <div class="modal-image-wrap" data-modal-media></div>
           <div class="modal-content">
             <h2 id="modal-title" data-modal-title></h2>
             <p id="modal-description" data-modal-description></p>
@@ -484,27 +404,9 @@
               <div class="modal-options" data-modal-addons></div>
             </section>
 
-            <section class="reviews">
-              <h3>Avaliações <span>(3)</span></h3>
-              <article>
-                <div class="review-head">
-                  <strong>Carlos M.</strong>
-                  <span>★★★★★</span>
-                </div>
-                <p>Melhor hambúrguer que já comi em Recife! O molho secreto é incrível.</p>
-              </article>
-              <article>
-                <div class="review-head">
-                  <strong>Fernanda L.</strong>
-                  <span>★★★★★</span>
-                </div>
-                <p>Chegou quentinho e o sabor é sensacional. Já pedi 3 vezes essa semana.</p>
-              </article>
-            </section>
-
             <label class="field-label" for="item-note">Alguma observação?</label>
-            <textarea id="item-note" rows="3" placeholder="Ex: Sem cebola, molho à parte..." aria-describedby="item-note-help"></textarea>
-            <span class="sr-only" id="item-note-help">Use este campo para avisar restrições, remoções ou preferências do preparo.</span>
+            <textarea id="item-note" rows="3" placeholder="Ex: Sem cebola, molho à parte, sabor do refrigerante..." aria-describedby="item-note-help"></textarea>
+            <span class="sr-only" id="item-note-help">Use este campo para avisar restrições, remoções, sabores ou preferências do preparo.</span>
           </div>
         </div>
         <footer class="modal-actions">
@@ -513,7 +415,7 @@
             <strong data-modal-quantity aria-live="polite">1</strong>
             <button type="button" data-modal-plus aria-label="Aumentar quantidade">+</button>
           </div>
-          <button class="add-cart-button" type="button">
+          <button class="add-cart-button" type="button" data-modal-add>
             <span aria-hidden="true">🛒</span>
             Adicionar ao carrinho
             <strong data-modal-total aria-live="polite">R$ 0,00</strong>
@@ -555,13 +457,13 @@
         </div>
 
         <div class="accessibility-group" role="group" aria-label="Preferências visuais">
-          <button class="accessibility-option" type="button" data-a11y-toggle="contrast" aria-pressed="false">
-            <span aria-hidden="true">◐</span>
-            Alto contraste
-          </button>
           <button class="accessibility-option" type="button" data-a11y-toggle="light" aria-pressed="false">
             <span aria-hidden="true">☀</span>
             Tema claro
+          </button>
+          <button class="accessibility-option" type="button" data-a11y-toggle="contrast" aria-pressed="false">
+            <span aria-hidden="true">◐</span>
+            Alto contraste
           </button>
           <button class="accessibility-option" type="button" data-a11y-toggle="spacing" aria-pressed="false">
             <span aria-hidden="true">↔</span>

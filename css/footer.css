@@ -3,8 +3,8 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 3rem 11.5vw 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0d0d0d;
+  border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  background: var(--bg);
 }
 
 .site-footer h3 {
@@ -15,11 +15,11 @@
 .site-footer a {
   display: block;
   margin: 0.45rem 0;
-  color: #a8a8a8;
+  color: var(--muted);
 }
 
 .site-footer strong {
-  color: var(--red);
+  color: var(--accent);
 }
 
 .socials {
@@ -33,15 +33,15 @@
   width: 2.3rem;
   height: 2.3rem;
   border-radius: 0.45rem;
-  color: #d8d8d8;
-  background: #1a1a1a;
+  color: var(--muted);
+  background: var(--surface-2);
   transition: background 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
 .socials a:hover,
 .socials a:focus-visible {
-  color: #171102;
-  background: var(--yellow);
+  color: var(--on-accent);
+  background: var(--accent);
   transform: translateY(-1px);
   outline: 0;
 }
@@ -55,7 +55,7 @@
 .copyright {
   grid-column: 1 / -1;
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
   text-align: center;
 }
 
@@ -73,7 +73,7 @@
   border-radius: 999px;
   color: white;
   background: var(--green);
-  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--green) 25%, transparent);
   font-weight: 950;
 }
 

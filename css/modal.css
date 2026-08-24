@@ -20,9 +20,9 @@
   width: min(100%, 36rem);
   max-height: min(94dvh, 52rem);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  border: 1px solid color-mix(in srgb, var(--text) 11%, transparent);
   border-radius: 0.75rem;
-  background: #111111;
+  background: var(--surface);
   box-shadow: var(--shadow);
 }
 
@@ -38,7 +38,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0 0.25rem 1.2rem 0;
-  scrollbar-color: var(--yellow) #1b1b1b;
+  scrollbar-color: var(--accent) var(--surface-2);
   scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
@@ -47,57 +47,31 @@
 .cart-body::-webkit-scrollbar,
 .cart-summary::-webkit-scrollbar,
 .modal-options::-webkit-scrollbar,
-.builder-options::-webkit-scrollbar {
-  width: 0.55rem;
-}
 
 .modal-scroll::-webkit-scrollbar-track,
 .cart-body::-webkit-scrollbar-track,
 .cart-summary::-webkit-scrollbar-track,
 .modal-options::-webkit-scrollbar-track,
-.builder-options::-webkit-scrollbar-track {
-  background: #1b1b1b;
-  border-radius: 999px;
-}
 
 .modal-scroll::-webkit-scrollbar-thumb,
 .cart-body::-webkit-scrollbar-thumb,
 .cart-summary::-webkit-scrollbar-thumb,
 .modal-options::-webkit-scrollbar-thumb,
-.builder-options::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--yellow), var(--yellow-2));
-}
 
 .modal-image-wrap {
   position: relative;
   height: clamp(14rem, 34vh, 19rem);
   margin: 1rem 1rem 0;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
   border-radius: 0.55rem;
-  background: #090909;
+  background: var(--bg);
 }
 
 .modal-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.rating-pill {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  display: inline-flex;
-  gap: 0.25rem;
-  align-items: center;
-  min-height: 1.8rem;
-  padding: 0 0.65rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.62);
-  font-size: 0.82rem;
-  font-weight: 900;
 }
 
 .modal-content {
@@ -115,7 +89,7 @@
 
 .modal-content p {
   margin: 0;
-  color: #a9a9a9;
+  color: var(--muted);
   line-height: 1.55;
 }
 
@@ -130,9 +104,9 @@
   gap: 0.75rem;
   margin: 0;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
   border-radius: 0.55rem;
-  background: #151515;
+  background: var(--surface-2);
 }
 
 .modal-details div {
@@ -141,7 +115,7 @@
 }
 
 .modal-details dt {
-  color: var(--yellow);
+  color: var(--accent);
   font-size: 0.76rem;
   font-weight: 950;
   text-transform: uppercase;
@@ -149,7 +123,7 @@
 
 .modal-details dd {
   margin: 0;
-  color: #c9c9c9;
+  color: var(--muted);
   line-height: 1.55;
 }
 
@@ -160,12 +134,12 @@
 }
 
 .modal-price span {
-  color: #888;
+  color: var(--muted);
   text-decoration: line-through;
 }
 
 .modal-price strong {
-  color: var(--yellow);
+  color: var(--accent);
   font-family: inherit;
   font-size: 1.5rem;
   font-weight: 800;
@@ -173,33 +147,18 @@
 
 .field-label,
 .modal-addons h3,
-.reviews h3 {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin: 0;
-  font-weight: 950;
-}
 
 .field-label::before,
 .modal-addons h3::before,
-.reviews h3::before {
-  content: "";
-  display: block;
-  width: 0.3rem;
-  height: 1.1rem;
-  border-radius: 999px;
-  background: var(--yellow);
-}
 
 textarea {
   width: 100%;
   min-height: 5.1rem;
   resize: vertical;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
   border-radius: 0.55rem;
   color: white;
-  background: #171717;
+  background: var(--surface-2);
   padding: 0.85rem;
 }
 
@@ -219,7 +178,7 @@ textarea {
 
 .addon-group h4 {
   margin: 0;
-  color: var(--yellow);
+  color: var(--accent);
   font-size: 0.82rem;
   font-weight: 950;
   text-transform: uppercase;
@@ -238,23 +197,23 @@ textarea {
   align-items: center;
   min-height: 4.35rem;
   padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
   border-radius: 0.55rem;
-  background: linear-gradient(180deg, #171717 0%, #111111 100%);
+  background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface) 100%);
   transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .addon-option:hover {
-  border-color: rgba(255, 193, 7, 0.42);
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
   transform: translateY(-1px);
 }
 
 .addon-option.selected {
-  border-color: rgba(255, 193, 7, 0.72);
+  border-color: color-mix(in srgb, var(--accent) 72%, transparent);
   background:
-    linear-gradient(180deg, rgba(255, 193, 7, 0.13), rgba(255, 193, 7, 0.06)),
-    #151515;
-  box-shadow: inset 0 0 0 1px rgba(255, 193, 7, 0.18);
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
+    var(--surface-2);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 .addon-copy {
@@ -271,7 +230,7 @@ textarea {
 
 .addon-copy span {
   display: block;
-  color: #ababab;
+  color: var(--muted);
   font-size: 0.8rem;
 }
 
@@ -281,9 +240,9 @@ textarea {
   align-items: center;
   min-height: 2.1rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
   border-radius: 0.48rem;
-  background: #090909;
+  background: var(--bg);
 }
 
 .addon-stepper button {
@@ -296,29 +255,13 @@ textarea {
 }
 
 .addon-stepper button:hover:not(:disabled) {
-  color: #171102;
-  background: var(--yellow);
+  color: var(--on-accent);
+  background: var(--accent);
 }
 
 .addon-stepper strong {
   text-align: center;
   font-size: 0.82rem;
-}
-
-.reviews {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.reviews h3 span {
-  color: #939393;
-  font-weight: 700;
-}
-
-.reviews article {
-  padding: 0.85rem;
-  border-radius: 0.55rem;
-  background: #181818;
 }
 
 .review-head {
@@ -329,7 +272,7 @@ textarea {
 }
 
 .review-head span {
-  color: var(--yellow);
+  color: var(--accent);
   font-size: 0.8rem;
 }
 
@@ -348,7 +291,7 @@ textarea {
   min-height: 2.65rem;
   overflow: hidden;
   border-radius: 0.55rem;
-  background: #090909;
+  background: var(--bg);
 }
 
 .quantity-stepper button {
@@ -382,10 +325,10 @@ textarea {
   z-index: 110;
   max-width: min(90vw, 24rem);
   padding: 0.85rem 1.1rem;
-  border: 1px solid rgba(255, 193, 7, 0.38);
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
   border-radius: 999px;
-  color: #171102;
-  background: var(--yellow);
+  color: var(--on-accent);
+  background: var(--accent);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   font-weight: 950;
   opacity: 0;

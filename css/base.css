@@ -1,16 +1,47 @@
+/* Paleta da marca Villa Burger: dourado do anel, preto do disco e creme da
+   tipografia da logo. Os tokens abaixo valem para os dois temas; o bloco
+   [data-theme="light"] so troca os valores, nunca os nomes. */
 :root {
   --a11y-font-scale: 1;
-  --bg: #070707;
-  --surface: #111111;
-  --surface-2: #171717;
-  --line: #272727;
-  --muted: #9b9b9b;
-  --text: #f6f6f6;
-  --yellow: #ffc107;
-  --yellow-2: #ff9f05;
-  --red: #ff2446;
+
+  --gold: #f5c518;
+  --gold-deep: #d99a00;
+  --gold-soft: #ffe08a;
+  --cream: #f3e9d2;
+  --ink: #0a0a0a;
+
+  --bg: #0d0d0d;
+  --surface: #141414;
+  --surface-2: #1c1c1c;
+  --line: #2c2a24;
+  --muted: #a49d8c;
+  --text: #f6f2e8;
+  --accent: var(--gold);
+  --accent-strong: var(--gold-deep);
+  --on-accent: #1a1200;
   --green: #25d366;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.52);
+  --danger: #ff5c7a;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  --page-gradient:
+    radial-gradient(circle at 50% 4%, rgba(245, 197, 24, 0.13), transparent 22rem),
+    linear-gradient(180deg, #070707 0%, #101010 55%, #080808 100%);
+}
+
+html[data-theme="light"] {
+  --bg: #f7f3ea;
+  --surface: #ffffff;
+  --surface-2: #fdf6e4;
+  --line: #e0d5b8;
+  --muted: #6b6252;
+  --text: #17130b;
+  --accent: var(--gold-deep);
+  --accent-strong: #b57f00;
+  --on-accent: #1a1200;
+  --danger: #c02040;
+  --shadow: 0 20px 60px rgba(90, 70, 20, 0.16);
+  --page-gradient:
+    radial-gradient(circle at 50% 3%, rgba(245, 197, 24, 0.3), transparent 22rem),
+    linear-gradient(180deg, #fffaf0 0%, #f9f5ec 55%, #f4eee0 100%);
 }
 
 * {
@@ -21,29 +52,16 @@ html {
   font-size: calc(100% * var(--a11y-font-scale));
   scroll-behavior: smooth;
   scroll-padding-top: 74px;
+  background: var(--bg);
 }
 
 body {
   margin: 0;
   min-width: 320px;
   color: var(--text);
-  background:
-    radial-gradient(circle at 50% 6%, rgba(255, 193, 7, 0.11), transparent 21rem),
-    linear-gradient(180deg, #050505 0%, #0b0b0b 52%, #080808 100%);
+  background: var(--page-gradient);
+  background-color: var(--bg);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-body[data-a11y-light="true"] {
-  --bg: #fffaf0;
-  --surface: #ffffff;
-  --surface-2: #fff6de;
-  --line: #c9b56e;
-  --muted: #4d4635;
-  --text: #16130d;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 50% 4%, rgba(255, 193, 7, 0.28), transparent 22rem),
-    linear-gradient(180deg, #fff8e3 0%, #ffffff 58%, #fff5d5 100%);
 }
 
 body[data-a11y-contrast="true"] {
@@ -53,10 +71,14 @@ body[data-a11y-contrast="true"] {
   --line: #ffffff;
   --muted: #ffffff;
   --text: #ffffff;
-  --yellow: #ffff00;
-  --yellow-2: #ffffff;
-  --red: #ff5c7a;
+  --gold: #ffff00;
+  --accent: #ffff00;
+  --accent-strong: #ffffff;
+  --on-accent: #000000;
+  --cream: #ffffff;
+  --danger: #ff5c7a;
   --green: #00ff66;
+  --page-gradient: none;
   color: #ffffff;
   background: #000000;
 }
@@ -86,9 +108,9 @@ body[data-a11y-links="true"] a {
 }
 
 body[data-a11y-focus="true"] :focus-visible {
-  outline: 5px solid #ffffff;
+  outline: 5px solid var(--text);
   outline-offset: 5px;
-  box-shadow: 0 0 0 9px rgba(255, 193, 7, 0.92);
+  box-shadow: 0 0 0 9px rgba(245, 197, 24, 0.92);
 }
 
 body[data-a11y-motion="true"] *,
@@ -104,6 +126,20 @@ html[data-a11y-motion="true"] {
   scroll-behavior: auto;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body.locked {
   overflow: hidden;
 }
@@ -114,7 +150,9 @@ a {
 }
 
 button,
-textarea {
+textarea,
+input,
+select {
   font: inherit;
 }
 
@@ -127,9 +165,17 @@ button:disabled {
   opacity: 0.5;
 }
 
+/* Regras de layout com display explicito (grid, flex) vencem o display:none
+   que o atributo hidden aplica, entao reforcamos aqui. Sem isso o campo de
+   endereco continuaria aparecendo no pedido para consumo no local. */
+[hidden] {
+  display: none !important;
+}
+
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .sr-only {
@@ -152,10 +198,10 @@ img {
   z-index: 200;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  color: #171102;
-  background: var(--yellow);
+  color: var(--on-accent);
+  background: var(--gold);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-  font-weight: 950;
+  font-weight: 900;
   transform: translateY(-160%);
   transition: transform 160ms ease;
 }
@@ -165,7 +211,7 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -173,3 +219,15 @@ main:focus {
   outline: 0;
 }
 
+/* Placeholder para itens sem foto (hot dogs, coxinhas e doces). */
+.product-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(245, 197, 24, 0.18), transparent 70%),
+    var(--surface-2);
+  font-size: 2.6rem;
+  line-height: 1;
+}

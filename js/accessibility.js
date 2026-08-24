@@ -1,9 +1,10 @@
-const STORAGE_KEY = "mordida-perfeita-accessibility-v1";
+import { setTheme, currentTheme } from "./theme.js";
+
+const STORAGE_KEY = "villa-burger-accessibility-v1";
 
 const defaultPreferences = {
   fontScale: 1,
   contrast: false,
-  light: false,
   spacing: false,
   readable: false,
   focus: false,
@@ -38,6 +39,15 @@ function bindAccessibilityEvents() {
     const togglePreference = event.target.closest("[data-a11y-toggle]");
     if (togglePreference) {
       const key = togglePreference.dataset.a11yToggle;
+
+      // O tema claro e do site inteiro, nao uma preferencia so deste menu.
+      if (key === "light") {
+        const isLight = currentTheme() === "light";
+        setTheme(isLight ? "dark" : "light");
+        announce(isLight ? "Tema escuro ativado" : "Tema claro ativado");
+        return;
+      }
+
       preferences[key] = !preferences[key];
       saveAndApply(`${togglePreference.textContent.trim()} ${preferences[key] ? "ativado" : "desativado"}`);
       return;
@@ -51,6 +61,7 @@ function bindAccessibilityEvents() {
 
     if (event.target.closest("[data-a11y-reset]")) {
       preferences = { ...defaultPreferences };
+      setTheme(null);
       saveAndApply("Preferências de acessibilidade restauradas");
     }
   });
@@ -82,7 +93,6 @@ function normalizePreferences(loadedPreferences) {
     ...loadedPreferences,
     fontScale: fontSteps.includes(fontScale) ? fontScale : defaultPreferences.fontScale,
     contrast: Boolean(loadedPreferences.contrast),
-    light: Boolean(loadedPreferences.light),
     spacing: Boolean(loadedPreferences.spacing),
     readable: Boolean(loadedPreferences.readable),
     focus: Boolean(loadedPreferences.focus),
@@ -109,7 +119,6 @@ function applyPreferences() {
   root.style.setProperty("--a11y-font-scale", String(preferences.fontScale));
   root.dataset.a11yMotion = String(preferences.motion);
   body.dataset.a11yContrast = String(preferences.contrast);
-  body.dataset.a11yLight = String(preferences.light);
   body.dataset.a11ySpacing = String(preferences.spacing);
   body.dataset.a11yReadable = String(preferences.readable);
   body.dataset.a11yFocus = String(preferences.focus);
@@ -120,6 +129,9 @@ function applyPreferences() {
 function syncControls() {
   document.querySelectorAll("[data-a11y-toggle]").forEach((button) => {
     const key = button.dataset.a11yToggle;
+    if (key === "light") {
+      return;
+    }
     button.setAttribute("aria-pressed", String(Boolean(preferences[key])));
     button.classList.toggle("active", Boolean(preferences[key]));
   });

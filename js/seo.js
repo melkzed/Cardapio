@@ -1,4 +1,4 @@
-import { SITE_URL } from "./config.js";
+import { RESTAURANT_NAME, SITE_URL } from "./config.js";
 import { availableAddonsForProduct } from "./addons.js";
 import { state } from "./state.js";
 import { absoluteUrl } from "./utils.js";
@@ -8,7 +8,7 @@ export function updateMenuStructuredData() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": `${SITE_URL}#menu-items`,
-    name: "Itens do cardápio Mordida Perfeita",
+    name: `Itens do cardápio ${RESTAURANT_NAME}`,
     itemListElement: state.products.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -16,7 +16,7 @@ export function updateMenuStructuredData() {
         "@type": "MenuItem",
         name: product.name,
         description: product.description,
-        image: absoluteUrl(product.image),
+        ...(product.image ? { image: absoluteUrl(product.image) } : {}),
         menuAddOn: availableAddonsForProduct(product).map((addon) => ({
           "@type": "MenuItem",
           name: addon.name,

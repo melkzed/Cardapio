@@ -18,7 +18,6 @@
   .cart-marker,
   .product-card,
   .feature-card,
-  .testimonial-card,
   .accessibility-toggle,
   .accessibility-panel,
   .accessibility-option,
@@ -33,16 +32,9 @@
   .menu-section,
   .addons-section,
   .features-section,
-  .location-section,
-  .testimonials-section,
   .site-footer {
     padding-right: 7vw;
     padding-left: 7vw;
-  }
-
-  .promo-band {
-    margin-right: 7vw;
-    margin-left: 7vw;
   }
 
   .product-grid {
@@ -108,13 +100,9 @@
     line-height: 0.9;
   }
 
-  .hero-copy > p:not(.eyebrow) {
+  .hero-copy > p {
     margin-top: 0.9rem;
     font-size: 1rem;
-  }
-
-  .hero .eyebrow {
-    margin-top: 0.3rem;
   }
 
   .hero-actions {
@@ -130,10 +118,6 @@
   .menu-section,
   .addons-section,
   .features-section,
-  .location-section,
-  .testimonials-section {
-    padding: 3.6rem 0.55rem;
-  }
 
   .section-heading h2 {
     font-size: clamp(2.5rem, 13vw, 3.3rem);
@@ -165,9 +149,7 @@
 
   .product-grid,
   .features-grid,
-  .testimonials-grid,
   .addons-grid,
-  .location-section,
   .site-footer {
     grid-template-columns: 1fr;
   }
@@ -180,31 +162,12 @@
     height: 11rem;
   }
 
-  .promo-band {
-    display: grid;
-    margin: 1rem 0.55rem 0;
-    padding: 1.3rem;
-  }
-
   .addons-grid {
     gap: 0.7rem;
   }
 
-  .builder-options .addon-options-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .builder-head {
-    align-items: start;
-    flex-direction: column;
-  }
-
   .feature-card {
     min-height: auto;
-  }
-
-  .map-panel {
-    min-height: 18rem;
   }
 
   .site-footer {
@@ -301,9 +264,6 @@
 
 @media (max-width: 420px) {
   .addon-options-grid,
-  .builder-options .addon-options-grid {
-    grid-template-columns: 1fr;
-  }
 
   .cart-drawer {
     width: 100vw;

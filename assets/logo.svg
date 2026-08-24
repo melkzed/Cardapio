@@ -1,26 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Ícone de hambúrguer Mordida Perfeita</title>
-  <desc id="desc">Hambúrguer grande estilizado com pão amarelo, recheios coloridos e sombra escura.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Villa Burger</title>
+  <desc id="logo-desc">Selo circular preto com anel dourado, a palavra VILLA em dourado e BURGER em creme, com um hambúrguer no lugar da letra O.</desc>
   <defs>
-    <linearGradient id="bunTop" x1="18" y1="14" x2="78" y2="54" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffd96a"/>
-      <stop offset="0.55" stop-color="#ffc107"/>
-      <stop offset="1" stop-color="#ff9f05"/>
+    <linearGradient id="vb-ring" x1="30" y1="18" x2="172" y2="186" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE9A6"/>
+      <stop offset="0.3" stop-color="#F5C518"/>
+      <stop offset="0.65" stop-color="#C98F00"/>
+      <stop offset="1" stop-color="#FFD84D"/>
     </linearGradient>
-    <linearGradient id="bunBottom" x1="20" y1="62" x2="76" y2="84" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffcf52"/>
-      <stop offset="1" stop-color="#ff9f05"/>
+    <linearGradient id="vb-villa" x1="60" y1="56" x2="140" y2="94" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFEDB4"/>
+      <stop offset="0.45" stop-color="#F5C518"/>
+      <stop offset="1" stop-color="#DF9F00"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
-    </filter>
+    <linearGradient id="vb-disc" x1="46" y1="34" x2="158" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E2E2E"/>
+      <stop offset="0.5" stop-color="#141414"/>
+      <stop offset="1" stop-color="#040404"/>
+    </linearGradient>
+    <linearGradient id="vb-bun-top" x1="112" y1="104" x2="142" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3C079"/>
+      <stop offset="1" stop-color="#CE8734"/>
+    </linearGradient>
   </defs>
-  <g filter="url(#shadow)">
-    <path d="M14 47c2.7-20.1 17.3-32.8 34-32.8S79.3 26.9 82 47H14Z" fill="url(#bunTop)"/>
-    <path d="M19.5 51.5h57" fill="none" stroke="#2b1606" stroke-width="8.5" stroke-linecap="round"/>
-    <path d="M17 58.5c8.4-5.5 14.4 5.5 22.8 0 8.4-5.4 15.8 5.4 24.2 0 5-3.2 9.5-1.1 13.8 1.6" fill="none" stroke="#ff2446" stroke-width="7" stroke-linecap="round"/>
-    <path d="M20 66.5c8.8 5.5 15.6-4.8 24.8.5 8.7 5 16-4.4 31.2.6" fill="none" stroke="#25d366" stroke-width="7" stroke-linecap="round"/>
-    <path d="M17 76h62c-1.8 6.8-7.2 10.8-14.8 10.8H31.8C24.2 86.8 18.8 82.8 17 76Z" fill="url(#bunBottom)"/>
-    <path d="M28 32h4.5M42 25.8h4.6M56.5 31h4.5M67 39h4" stroke="#8b420b" stroke-width="4.2" stroke-linecap="round"/>
+
+  <circle cx="100" cy="100" r="98" fill="url(#vb-ring)"/>
+  <circle cx="100" cy="100" r="87" fill="#0A0A0A"/>
+  <circle cx="100" cy="100" r="83" fill="url(#vb-disc)"/>
+
+  <!-- textLength trava a largura de cada palavra, entao o desenho fica igual
+       mesmo onde a fonte pesada do sistema for diferente. -->
+  <g font-family="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="900">
+    <text x="100" y="86" font-size="44" textLength="112" lengthAdjust="spacingAndGlyphs"
+          text-anchor="middle" fill="url(#vb-villa)"
+          stroke="#6E4B00" stroke-width="1.4" paint-order="stroke">VILLA</text>
+    <text x="39" y="130" font-size="38" textLength="68" lengthAdjust="spacingAndGlyphs"
+          fill="#F3E9D2" stroke="#7E6E4C" stroke-width="1.1" paint-order="stroke">BURG</text>
+    <text x="139" y="130" font-size="38" textLength="22" lengthAdjust="spacingAndGlyphs"
+          fill="#F3E9D2" stroke="#7E6E4C" stroke-width="1.1" paint-order="stroke">R</text>
   </g>
+
+  <g transform="translate(124 118)">
+    <path d="M-15 -4c0-7.4 6.7-12.6 15-12.6S15 -11.4 15 -4Z" fill="url(#vb-bun-top)"/>
+    <circle cx="-6" cy="-10" r="1.2" fill="#FFF3DC"/>
+    <circle cx="1.5" cy="-12.3" r="1.2" fill="#FFF3DC"/>
+    <circle cx="8.5" cy="-9" r="1.2" fill="#FFF3DC"/>
+    <rect x="-15.5" y="-4" width="31" height="4.6" rx="2.3" fill="#F0A500"/>
+    <path d="M-15.5 0.6h31l-3 3.9a4.4 4.4 0 0 1-3.4 1.6h-18.2a4.4 4.4 0 0 1-3.4-1.6Z" fill="#6FA524"/>
+    <rect x="-15" y="4.4" width="30" height="5.2" rx="2.6" fill="#89491F"/>
+    <path d="M-15 9c0 5 6.4 8.6 15 8.6s15-3.6 15-8.6Z" fill="#D9954A"/>
+  </g>
+
+  <path d="M48 150h104" stroke="#F3E9D2" stroke-width="4.5" stroke-linecap="round" fill="none"/>
 </svg>

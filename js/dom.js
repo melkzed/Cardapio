@@ -1,6 +1,5 @@
 export const productGrid = document.querySelector("[data-product-grid]");
 export const productCount = document.querySelector("[data-product-count]");
-export const addonsGrid = document.querySelector("[data-addons-grid]");
 export const searchInput = document.querySelector("[data-search-input]");
 export const modal = document.querySelector(".modal-backdrop");
 export const modalMedia = document.querySelector("[data-modal-media]");

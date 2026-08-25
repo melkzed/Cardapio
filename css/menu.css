@@ -17,8 +17,9 @@
 }
 
 .menu-section,
-.addons-section,
-.features-section,
+.features-section {
+  padding: clamp(4rem, 8vw, 6.5rem) 11.5vw;
+}
 
 .category-tabs {
   display: flex;

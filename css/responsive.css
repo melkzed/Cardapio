@@ -30,7 +30,6 @@
   .topbar,
   .hero,
   .menu-section,
-  .addons-section,
   .features-section,
   .site-footer {
     padding-right: 7vw;
@@ -116,8 +115,9 @@
   }
 
   .menu-section,
-  .addons-section,
-  .features-section,
+  .features-section {
+    padding: 3.6rem 0.55rem;
+  }
 
   .section-heading h2 {
     font-size: clamp(2.5rem, 13vw, 3.3rem);
@@ -149,7 +149,6 @@
 
   .product-grid,
   .features-grid,
-  .addons-grid,
   .site-footer {
     grid-template-columns: 1fr;
   }
@@ -160,10 +159,6 @@
 
   .product-image {
     height: 11rem;
-  }
-
-  .addons-grid {
-    gap: 0.7rem;
   }
 
   .feature-card {
@@ -263,7 +258,9 @@
 }
 
 @media (max-width: 420px) {
-  .addon-options-grid,
+  .addon-options-grid {
+    grid-template-columns: 1fr;
+  }
 
   .cart-drawer {
     width: 100vw;

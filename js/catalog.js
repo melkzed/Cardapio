@@ -1,8 +1,7 @@
-import { addonsGrid, productGrid } from "./dom.js";
+import { productGrid } from "./dom.js";
 import { normalizeAddon, normalizeCartAddons } from "./addons.js";
 import { normalizeProduct, renderProducts } from "./products.js";
 import { persistCart } from "./storage.js";
-import { renderAddonsSection } from "./addons-section.js";
 import { renderCart } from "./cart.js";
 import { state } from "./state.js";
 import { updateMenuStructuredData } from "./seo.js";
@@ -18,7 +17,6 @@ async function getJson(path) {
 export async function loadCatalog() {
   productGrid.innerHTML = '<p class="menu-status">Carregando cardápio...</p>';
   productGrid.setAttribute("aria-busy", "true");
-  addonsGrid.innerHTML = '<p class="menu-status">Carregando adicionais...</p>';
 
   try {
     const [loadedProducts, loadedAddons] = await Promise.all([
@@ -30,7 +28,6 @@ export async function loadCatalog() {
     state.addons = loadedAddons.map(normalizeAddon);
     reconcileStoredCart();
     renderProducts();
-    renderAddonsSection();
     renderCart();
     updateMenuStructuredData();
     productGrid.setAttribute("aria-busy", "false");
@@ -42,7 +39,6 @@ export async function loadCatalog() {
         pelo WhatsApp para fazer o pedido.
       </p>
     `;
-    addonsGrid.innerHTML = "";
     productGrid.setAttribute("aria-busy", "false");
   }
 }

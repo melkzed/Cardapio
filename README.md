@@ -85,7 +85,6 @@ export const OPENING_HOURS = [{ days: "Terça a Domingo", hours: "18:00 às 23:0
 |-- package.json
 |-- css/
 |   |-- accessibility.css
-|   |-- addons.css
 |   |-- base.css
 |   |-- cart.css
 |   |-- footer.css
@@ -97,7 +96,6 @@ export const OPENING_HOURS = [{ days: "Terça a Domingo", hours: "18:00 às 23:0
 |   `-- sections.css
 |-- js/
 |   |-- accessibility.js
-|   |-- addons-section.js
 |   |-- addons.js
 |   |-- app.js
 |   |-- cart.js
@@ -105,6 +103,7 @@ export const OPENING_HOURS = [{ days: "Terça a Domingo", hours: "18:00 às 23:0
 |   |-- config.js
 |   |-- dom.js
 |   |-- events.js
+|   |-- hours.js
 |   |-- media.js
 |   |-- modal.js
 |   |-- products.js
